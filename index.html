@@ -40,25 +40,32 @@
     <div class="row">
         <div class="col-md-3 col-md-push-1">
 
-            <div style="margin-right: 2em"><img src="ofic_photo.jpg" class="img-responsive img-rounded"
+            <div style="margin-right: 2em"><img src="me-ofic-2.jpg" class="img-responsive img-rounded"
                                                 style="margin-right: 1em; margin-bottom: 1em; max-height: 700px"/></div>
 
             <hr/>
             <p><strong>Email: <a href="mailto:elre@princeton.edu">elre@princeton.edu</a></strong>
-            <ul>
-                <li><a href="https://scholar.google.com/citations?user=nZ27XjIAAAAJ&hl=en">Google Scholar</a></li>
-                <li><a href="https://arxiv.org/search/?query=rebrova&searchtype=all&source=header">arXiv</a></li>
-            </ul>
+                <center><a class="btn btn-default btn-lg" href="https://scholar.google.com/citations?user=nZ27XjIAAAAJ&hl=en" role="button"
+                    style="margin-right: 1.2em">Google Scholar</a></center>
+            <p></p>
+            <center><a class="btn btn-default btn-lg" href="research2.html" role="button"
+                style="margin-right: 1.2em">Papers by topic</a></center>
+                <p></p>
+                <ul>
+                    <li><a href="research.html">Papers by year</a></li>
+                    <li><a href="https://arxiv.org/search/?query=rebrova&searchtype=all&source=header">arXiv</a></li>
+                </ul>
             <hr/>
 
             <p><strong>Keywords:</strong>
             <ul>
+                <li> data compression and recovery </li>
                 <li> high-dimensional probability</li>
-                <li> randomized algorithms</li>
-                <li> tensor methods</li>
-                <li> numerical linear algebra</li>
-                <li> non-asymptotic random matrix theory</li>
                 <li> mathematics of data</li>
+                <li> numerical linear algebra</li>
+                <li> random matrix theory</li>
+                <li> randomized algorithms</li>
+                <li> tensor methods</li>    
             </ul>
 
             <hr/>
@@ -78,13 +85,6 @@
 
         </div>
         <div class="col-md-offset-1 col-md-7 col-md-pull-0">
-            <div class="row" align="center">
-                <a class="btn btn-default btn-lg" href="research2.html" role="button"
-                   style="margin-right: 1.2em">Papers</a>
-                <a class="btn btn-default btn-lg" href="talks.html" role="button" style="margin-right: 1.2em">Talks and
-                    slides</a>
-                <!-- <a class="btn btn-default btn-lg" href="ORF523.html" role="button" style="margin-right: 1.2em">ORF523</a> -->
-           </div>
 
             <h2> Intro </h2>
             <p> I am an Assistant Professor at <a href="https://orfe.princeton.edu/">Princeton University Operations research (ORFE)</a> Department.</p>
@@ -92,23 +92,18 @@
 
             <p>My previous academic story includes:</p>
             <ul>
-                <li> In the first half of 2021, I was a postdoctoral scholar at the <a href="http://www.lbl.gov/">Lawrence Berkeley National
-                    Lab</a> Computation Research Division
-                    on the project "Tensor Factorizations in Machine Learning".</li>
-                <li> Until the end of 2020, I was an Assistant Adjunct Professor (which means, a postdoc :)) at <a
+                <li> 2018-2021 - Assistant Adjunct Professor (which means, a postdoc :)) at <a
                         href="https://www.math.ucla.edu/">
-                    UCLA Department of Mathematics</a> in July'18. My mentors were <a
-                        href="https://www.math.ucla.edu/~deanna/">Deanna Needell</a> and <a
-                        href="https://www.math.ucla.edu/~tao/">Terence Tao</a>.
+                    UCLA Department of Mathematics</a>, I worked mostly in
+                        <a href="https://www.math.ucla.edu/~deanna/">Deanna Needell</a>'s' research group.
                 </li>
-                <li>In Spring 2018 I graduated from
-                    <a href="http://umich.edu">University of Michigan</a> <a href="http://www.lsa.umich.edu/math/">(Mathematics)</a>.
-                    I was fortunate to have <a href="http://www-personal.umich.edu/~romanv/">Roman
-                        Vershynin</a> as my graduate advisor.
+                <li> 2013-2018 - Graduate Student at
+                    <a href="http://umich.edu">University of Michigan</a> <a href="http://www.lsa.umich.edu/math/">(Mathematics)</a> under supervision of <a href="http://www-personal.umich.edu/~romanv/">Roman
+                        Vershynin</a>.
                 </li>
-                <li> Summers 2017 and 18 I worked at the <a href="http://www.lbl.gov/">Lawrence Berkeley National
-                    Lab</a> Computation Research Division (in the <a href="http://crd-legacy.lbl.gov/~xiaoye/">Xiaoye
-                    Sherry Li</a> group).
+                <li> Summers 2017 and 2018 - <a href="http://www.lbl.gov/">Lawrence Berkeley National
+                    Lab</a> Computation Research Division, <a href="http://crd-legacy.lbl.gov/~xiaoye/">Xiaoye
+                    Sherry Li</a> group. I was also a Postdoctoral Scholar at LBNL in the first half of 2021.
                 </li>
                 <li>In 2012 I got my specialist degree (B.S.+M.S. equivalent) in Mathematics at
                     <a href="http://www.msu.ru/en/">Moscow State University</a> under supervision of Professor
@@ -116,7 +111,6 @@
                 </li>
             </ul>
 
-            My work is currently supported by NSF DMS-2309685 and NSF DMS-2108479. 
             
             <!--
                 Full story:
@@ -129,20 +123,44 @@
             <hr/>
             <h2> Research </h2>
 
-            <p> I study the structure of large high-dimensional objects in the presence of randomness, and use this
-                understanding to develop randomized algorithms that efficiently process complex data. See <a href="research2.html">here</a> for the list of my most relevant papers and preprints roughly organized by topic; see my CV (a button above) for the full list of publications;
-            and see <a href="talks.html">here</a> for some past talks slides.
+            <p> My research is in mathematics of data science. I develop mathematical methodologies to model and analyze large high-dimensional data 
+                using the approaches from high-dimensional probability, numerical linear algebra, stochastic optimization, compressed sensing, random matrix theory, convex analysis. 
+                Recently, I have been working on stochastic iterative methods for solving linear systems; efficient compression and recovery of tensor data; and interpretable matrix and tensor data factorizations. 
+                 </p>
+
+             <p>   
+                See <a href="research2.html">here</a> for the list of my most relevant papers and preprints roughly organized by topic;
+            and see <a href="talks.html">here</a> for some past talks slides; my <a href="https://scholar.google.com/citations?user=nZ27XjIAAAAJ&hl=en">Google Scholar</a> has the best updated publications list.
             </p>
+            <p> My work is supported by </p>
+            <ul>
+                <li> NSF DMS-2309685 ("Outliers are not what they seem: data-aware, flexible, and robust randomized iterative methods", Single PI) </li>
+                <li> NSF DMS-2108479 ("Fast, Low-Memory Embeddings for Tensor Data with Applications", Collaborative proposal, co-PIs Mark Iwen and Deanna Needell). </li>
+            </ul>
             <p>
-                If you are a Princeton student and would like to talk, please email me to set up a meeting,
-                I am happy to meet with you. If you are looking to apply for a PhD program, you should apply directly to the department. Sorry that
-                I do not reply to the outside emails about applying for our PhD program.
+                If you have any research question, please email me, I will do my best to reply. 
+                If you are looking to apply for a PhD program, you should apply directly to the department. Sorry that
+                I do not reply to the emails about applying for our PhD program.
             </p>
             <hr/>
 
+           
+            <h2> Students </h2>
+            I am very happy to work with these great Ph.D. students:
+            <ul>
+                <li> <a href="https://chaudhrya.github.io/">Abraar Chaudhry</a> (5th year, co-advised with <a href="https://aaa.princeton.edu/">Amir Ali Ahmadi</a>) </li>
+                <li> <a href="https://jackielok.github.io/">Jackie Lok</a> (3rd year)</li>
+                <li> Shambhavi Suryanarayanan (3rd year) </li>
+                <li> Sofiia Shvaiko (2nd year) </li>
+            </ul>
 
+            Former students:
+            <ul>
+                <li> Nicolo Grometto, Masters thesis "Essays on Random Matrices" (2023) </li>
+            </ul>
+            <hr/>
             <h2 id="teaching"> Teaching </h2> <p>
-            See the button on top of the page for the link to ongoing class website.
+            I am teaching <a href="ORF526.html">ORF526</a> (Graduate Probability) in the Fall 2023. 
         </p>
             <p>
                 Past teaching at Princeton: <a href="ORF387.html">ORF387</a> (Networks, Fall 2022), <a href="ORF523.html">ORF523 </a> (Convex and Conic Optimization, Spring 2022)
@@ -170,13 +188,8 @@
                         href="https://yandexdataschool.com/">Yandex Data
                     Analysis school</a>, it was such a great time.
             </p>
-            <p>My non-mathy interests include all that I find beautiful or challenging. For example, <a
-                    href="https://www.youtube.com/watch?v=1ST9TZBb9v8">songs</a>,
-                <a href="https://www.artic.edu/iiif/2/e3ee52bc-24db-3da0-6e3d-dd102848ca6d/full/843,/0/default.jpg">art</a>,
-                street art, <a href="https://farm8.staticflickr.com/7556/15874295035_373886f38c_b.jpg">cities</a>, <a
-                        href="me_and_mountains.jpg">oceans and mountains</a>, <a href="timofej.JPG">cats</a>, great
-                stories of any kind, poetry and classic fantasy, puzzles... Finally, I love consuming and talking about
-                coffee and European sweets.</p>
+            <p>My non-mathy interests include things that I find beautiful or challenging, such as, good stories, arts, oceans, 
+                mountains and cities, also finding and making perfect coffee. </p>
 
             <p align="right">“Poirot,” I said. “I have been thinking.”<br>“An admirable exercise my friend. Continue
                 it.”<br>(Agatha Christie, Peril at End House)</p>
