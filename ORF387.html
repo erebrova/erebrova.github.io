@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Liza Rebrova research website</title>
@@ -15,132 +16,214 @@
     <!--[if lt IE 9]>
 
     <![endif]-->
+    <style>
+        .lectures-container {
+            display: grid;
+            grid-template-columns: 6em 2fr 1fr;
+            margin: 20px;
+        }
+
+        .lecture,
+        .ltitle,
+        .lref {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .lecture {
+            font-weight: bold;
+        }
+
+        .ltitle {
+            text-align: left;
+        }
+
+        .lref {
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body role="document">
-<div class="container" style="background: #FBFBFB; margin-top: 2em; border: 2px #A6A279 double">
-    <div class="row">
-        <div class="page-header col-md-10 col-md-offset-1"><h1>ORF378  Networks <small><a href="index.html">back to homepage</a></small><!--<img style="height: 1.5em; padding-left: 1em" src="M-logo.png"/>--></h1>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-offset-1 col-md-10">
-
-            <!--
-                           <p></p>
-                           Other references and additional reading:
-                           <dl class="dl-horizontal">
-                               <dt> [01] </dt><dd><a href="orf523_intro_ann.pdf" > Annotated slides from the first class</a> </dd>
-                               <dt> [CZ] </dt><dd><a href="https://eng.uok.ac.ir/mfathi/Courses/Advanced%20Eng%20Math/An%20Introduction%20to%20Optimization-%20E.%20Chong,%20S.%20Zak.pdf"> E. Chong, S. Zak, An Introduction to optimization</a> </dd>
-                                <dt> [V] </dt><dd><a href="https://www.math.uci.edu/~rvershyn/papers/GFA-book.pdf"> R. Vershynin, Lectures in Geometric Functional Analysis  </a> </dd>
-                               <dt> [B] </dt><dd><a href="http://213.230.96.51:8090/files/ebooks/matematika/Barvinok%20A.%20A%20course%20in%20convexity%20(GSM054,%20AMS,%202002)(ISBN%209780821829684)(O)(378s)%20MD%20.pdf"> A. Barvinok, A course in convexity  </a> </dd>
-                               <dt> [522] </dt><dd><a href="https://stellato.io/downloads/teaching/orf522/03_lecture.pdf">ORF522 Lecture 3 (Prof B. Stellato)</a></dd>
-                               <dt> [BPpaper] </dt><dd> <a href="https://dspace.mit.edu/bitstream/handle/1721.1/2718/SWP-4025-40968492.pdf%3Bjsessionid%3D48FBFC498E588A9F28C0D95108D22334?sequence%3D1"> D. Bertsimas, I. Popescu, Optimal Inequalities in Probability Theory:
-                               A Convex Optimization Approach</a></dd>
-                               <dt> [DPV] </dt><dd> <a href="http://algorithmics.lsi.upc.edu/docs/Dasgupta-Papadimitriou-Vazirani.pdf"> S. Dasgupta, C. Papadimitriou, U. Vazirani, Algorithms, 2008.</a></dd>
-                           <dt>[KN]</dt><dd><a href="https://arxiv.org/pdf/1108.2464.pdf">S. Khot, A. Naor, Grothendieck's type inequalities in combinatorial optimization</a></dd>
-                               <dt>[S]</dt><dd><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4031351">T.Sarlos, Improved Approximation Algorithms for Large Matrices via Random
-                               Projections</a></dd>
-                               <dt>[NPR]</dt><dd><a href="https://arxiv.org/pdf/1801.04873.pdf">I. Necoara, A. Patrascu, P. Richtarik, Randomized projection methods for convex feasibility
-                               problems: conditioning and convergence rates</a></dd>
-                               <dt>[PW]</dt><dd><a href="https://arxiv.org/pdf/1404.7203.pdf">M. Pilanci, M. Wainwright, Randomized Sketches of Convex Programs
-                               with Sharp Guarantees</a></dd>
-                               <dt>[BF]</dt><dd><a href="https://arxiv.org/pdf/1707.09863.pdf">A. Bluhm, D. S. Franca, Dimensionality reduction of SDPs through
-                               sketching</a></dd>
-                           </dl>
-            -->
-
-            <h2>Materials from Fall 2022 Networks class</h2>
-
-            <h2>Materials to get started:</h2>
-            <dl class="dl-horizontal">
-                <dt><a href="387-syllabus.pdf">Syllabus</a></dt><dd>What the rules are</dd>
-                <dt><a href="orf387_calendar.pdf">Calendar</a></dt><dd>When everything happens</dd>
-                <dt><a href="387-project.pdf">Project description</a></dt><dd>About class project</dd>
-                <dt><a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">Textbook link</a></dt><dd>David Easley, Jon Kleinberg, Networks, Crowds, and Markets: reasoning about highly connected world, Cambridge Univ. Press, 2010</dd>
-            </dl>
-
-           <h4>Office hours:</h4>
-            <dl class="dl-horizontal">
-            <dt>Rajiv</dt><dd>9-10:30 @ 107 on Monday</dd>
-            <dt>Liza</dt><dd>9:15-10:45 @ 123 Tuesday</dd>
-            <dt>Jackie</dt><dd>3-4:30 @ 107 Wednesday</dd>
-            <dt>Shambhavi</dt><dd>4-5:30 @ 003 Thursday</dd>
-            <dt>Aaradhya</dt><dd>9:30-11:00 @ 122 Friday</dd>
-            </dl>
-            We will also use Canvas website (a) to access Gradescope and Ed discussion, (b) for course announcements (make sure you are subscribed, the first announcement will be sent before the first class), (c) for posting all the assignments and class notes.
-            <hr/>
-
-            <h2>Course description:</h2>
-               This course showcases how networks are widespread in society, technology, and nature, via a mix of theory and applications. It demonstrates the importance of understanding network effects when making decisions in an increasingly connected world. Topics include an introduction to graph theory, game theory, social networks, information networks, strategic interactions on networks, network models, network dynamics, information diffusion, and more. General topics include
-            <dl class="dl-horizontal">
-                <dt> - </dt><dd> Graph theory: graph partioning, strong and weak ties and triadic closure, homophily and spatial models  </dd>
-                <dt> - </dt><dd> Game theory: dominant strategies, equilibria, optimality</dd>
-                <dt> - </dt><dd> Applications: modeling traffic and auctions, markets in networks, internet and information networks  </dd>
-                <dt> - </dt><dd> Network dynamics: population models </dd>
-                <dt> - </dt><dd> Network dynamics: structural models</dd>
-
-
-            </dl>
-
-
-            <h4>Topics and materials:</h4>
-            Textbook and other references are not substitutions for your class notes!
-            <p>
-
-            </p>
-            <dl class="dl-horizontal">
-                <dt>09/06  </dt><dd> Introduction (diversity of networks) and first definitions [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:Ch 1-2]  </dd>
-                <dt>09/08 </dt><dd> Six degrees of separation & the power of weak ties [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:Ch 2-3]  </dd>
-                <dt>09/13 </dt><dd> Centrality (degree, distance-based, betweenness) and partitioning in networks [<a href="betweenness.pdf">note</a> (on betweenness), <a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>: 3.6]  </dd>
-                <dt>09/15 </dt><dd> Friendship paradox & balance in signed networks [<a href="on-friendship-paradox.pdf">note</a> (on the friendship paradox), <a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:Chapter 5]  </dd>
-                <dt>09/20 </dt><dd> Shelling segregation model & game theory, dominant and dominated strategies [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>: 4.5, 6.1-6.3, 6.10]  </dd>
-                <dt>09/22 </dt><dd> Game theory continued: Nash equilibrium [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:6.4-6.6, 6.10]  </dd>
-                <dt>09/27 </dt><dd> Mixed strategies, existence of mixed NE, potential functions [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:6.5-6.8,<a href="potential.pdf">note 1</a> (on potential functions), <a href="mixed-ne.pdf">note 2</a> (on computing mixed NE)]  </dd>
-                <dt>09/29 </dt><dd> Traffic networks: Braess paradox, optimal cost and cost at equilibrium [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:8.1-8.3, 6.9 ]  </dd>
-                <dt>10/04</dt><dd>One-sided matching markets and valuations [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:Ch 10]</dd>
-                <dt>10/06</dt><dd>Matching market continued: existence of market-clearing prices [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:Ch 10]</dd>
-                <dt>10/11</dt><dd>Stable matchings and Gale-Shapley algorithm [<a href="https://homes.cs.washington.edu/~karlin/GameTheoryBook.pdf">Karlin&Peres textbook</a>(10.1-10.3), <a href="http://www.cs.cmu.edu/~arielpro/15896s16/slides/896s16-16.pdf">a nice presentation</a>]</dd>
-                <dt>10/13</dt><dd>---------------------No class, midterm--------------------------</dd>
-                <dt>10/25</dt><dd>Structure of the Web and basics of ranking [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:Ch 13,14]</dd>
-                <dt>10/27</dt><dd>4 algorithms for webpage ranking (degree-based, Hubs&Authorities, basic PageRank, Smoothed PageRank) [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:Ch 14]</dd>
-                <dt>11/1</dt><dd> Intro to the dynamic on networks: information cascades [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:Ch 16]</dd>
-                <dt>11/3</dt><dd> Diffusion of innovations: model description and the importance of dense clusters for (non-)cascading [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:Ch 19]</dd>
-                <dt>11/8</dt><dd> Diffusion of innovations continued: global coordination, cascade capacity, bilingual stage of adoption [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:Ch 19]</dd>
-                <dt>11/10</dt><dd> Dynamic on networks continued: epidemic modelling [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:Ch 21]</dd>
-                <dt>11/15</dt><dd> Probabilistic (generative) network modelling: Watts-Strogatz small-world model [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:Ch 20, 21.6]</dd>
-                <dt>11/17</dt><dd> Probabilistic network modelling: Erdos-Renyi, Barabasi-Albert, Stochastic Block Model [<a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">EK</a>:Ch 18 and notes]</dd>
-                <dt>11/29</dt><dd> Comparing Erdos-Renyi, Barabasi-Albert and Watts-Strogatz models; configuration model [<a href="http://networksciencebook.com/chapter/3">Barabasi</a>:from Ch 3,4]</dd>
-                <dt>12/01</dt><dd> Guest lecture by J. Klusowski</dd>
-
-
-
-
-
-            </dl>
-            <p></p>
-            Supplementary notes:
-            <dl class="dl-horizontal">
-                <dt> - </dt><dd> On <a href="betwenness.pdf">betweenness centrality</a> </dd>
-                <dt> - </dt><dd> On <a href="on-friendship-paradox.pdf">the friendship paradox</a> </dd>
-                <dt> - </dt><dd> On <a href="potential.pdf">best response dynamic and potential functions</a>  </dd>
-                <dt> - </dt><dd> On <a href="mixed-ne.pdf">computing pure and mixed Nash equilibria </a> </dd>
-
-
-            </dl>
-
-
-
+    <div class="container" style="background: #FBFBFB; margin-top: 2em; border: 2px #A6A279 double">
+        <div class="row">
+            <div class="page-header col-md-10 col-md-offset-1">
+                <h1>ORF378 Networks <small><a href="index.html">back to
+                            homepage</a></small><!--<img style="height: 1.5em; padding-left: 1em" src="M-logo.png"/>-->
+                </h1>
+            </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+                <h2>Course description:</h2>
+                This course showcases how networks are widespread in society, technology, and nature,
+                via a mix of theory and applications. It demonstrates the importance of understanding
+                network effects when making decisions in an increasingly connected world. Four main parts of the course
+                are
+                <dl class="dl-horizontal">
+                    <dt> 1. </dt>
+                    <dd> Introduction to graph theory and network structure </dd>
+                    <dt> 2. </dt>
+                    <dd> Intrduction to game theory and strategic interactions on networks</dd>
+                    <dt> 3. </dt>
+                    <dd> Modelling evolving processes with dynamics on networks </dd>
+                    <dt> 4. </dt>
+                    <dd> Modelling large scale realistic networks with random graphs </dd>
+                </dl>
+                The applications include social networks, transportation networks, internet, innovation and disease
+                spread, and others
 
+                <p>
+
+                </p>
+                The class is graded based on the final exam, the midterm, homeworks and project reports.
+                <p>
+
+                </p>
+                <hr />
+                <p>
+
+                </p>
+
+
+                <h4>Materials:</h4>
+                The main recommended textbook is
+                <dl class="dl-horizontal">
+                    <dt><a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">[E&K]</a></dt>
+                    <dd>D. Easley, J. Kleinberg, Networks, Crowds, and Markets: reasoning about highly connected world,
+                        Cambridge Univ. Press, 2010</dd>
+                </dl>
+                This textbook provides additional background information, details and examples to complement the class
+                material.
+                However, it does not contain all the topics and definitions covered in class. Other helpful references
+                include
+                <dl class="dl-horizontal">
+                    <dt><a href="https://math.bme.hu/~gabor/oktatas/SztoM/Newman_Networks.pdf">[N]</a></dt>
+                    <dd>M.E.J. Newman, Networks. An introduction. Oxford University Press, 2010</dd>
+                    <dt><a href="https://homes.cs.washington.edu/~karlin/GameTheoryBook.pdf">[K&P]</a></dt>
+                    <dd>A. R. Karlin, Y. Peres Game theory. Alive. Published by AMS, 2016</dd>
+                    <dt><a href="http://networksciencebook.com/">[B]</a></dt>
+                    <dd>A.-L. Barabasi, Network science. online textbook</dd>
+
+                </dl>
+                Finally, a variety of supplementary notes on particular class topics is available due to the amazing
+                help of teaching assistants, including
+                <dl class="dl-horizontal">
+                    <dt> - </dt>
+                    <dd> On <a href="friendship-paradox.pdf">the friendship paradox</a> </dd>
+                    <dt> - </dt>
+                    <dd> On <a href="centrality-measures.pdf">on centrality measures</a> </dd>
+                    <dt> - </dt>
+                    <dd> On <a href="mixed-Nash-exampe.pdf">computing pure and mixed Nash equilibria </a> </dd>
+                    <dt> - </dt>
+                    <dd> On <a href="potential.pdf">best response dynamic and potential functions</a> </dd>
+
+
+
+                </dl>
+                <p>
+
+                </p>
+                <hr />
+                <p>
+
+                </p>
+                <h4>Tentative list of topics with references:</h4>
+                References to the textbooks are denoted as in the list above (e.g., [E&K] - Easley and Kleinberg, ...)
+                <div class="lectures-container">
+                    
+                    <div class="lecture">Lec 1</div>
+                    <div class="ltitle">Connected components, giant component, graph definitions</div>
+                    <div class="lref">[E&K, Chapter 2], [B,
+                        introduction]</div>
+                    <div class="lecture">Lec 2</div>
+                    <div class="ltitle">Path lengths, adjacency matrices, connected components</div>
+                    <div class="lref">[E&K, from Chapters 2 and 13, and
+                        also 3], [N, Chapter 6]</div>
+
+                    <div class="lecture">Lec 3</div>
+                    <div class="ltitle">Vertex degrees, regular graphs, friendship paradox</div>
+                    <div class="lref">on-friendship-paradox.pdf</div>
+
+                    <div class="lecture">Lec 4</div>
+                    <div class="ltitle">Strong and weak ties, clustering coefficient, signed networks, edge centrality
+                    </div>
+                    <div class="lref">[E&K,
+                        Chapters 3, 5; Chapter 4 briefly mentioned]</div>
+
+                    <div class="lecture">Lec 5</div>
+                    <div class="ltitle">Node centralities</div>
+                    <div class="lref">[N, Chapter 7], [E&K, Chapters 3, to some extent 14]
+                        centrality-measures.pdf</div>
+
+                    <div class="lecture">Lec 6</div>
+                    <div class="ltitle">Partitioning and clustering</div>
+                    <div class="lref">[E&K, Chapters 3.6], [N, Chapter 11.5]</div>
+
+                    <div class="lecture">Lec 7</div>
+                    <div class="ltitle">Important concept from game theory: main definitions and assumptions, dominant
+                        strategies</div>
+                    <div class="lref"> [E&K, Chapter 6]</div>
+
+                    <div class="lecture">Lec 8</div>
+                    <div class="ltitle">Important concept from game theory: Nash equilibria, mixed strategies, best
+                        response dynamic
+                        and potential games</div>
+                    <div class="lref">[E&K, Chapter 6], [K&P, Intro, Chapter 4], mixed-Nash-example.pdf,
+                        potential-functions.pdf</div>
+
+                    <div class="lecture">Lec 9</div>
+                    <div class="ltitle">Applications to traffic modeling, Braess paradox</div>
+                    <div class="lref">[E&K, Chapter 8]</div>
+
+                    <div class="lecture">Lec 10</div>
+                    <div class="ltitle">Two-sided matching markets, Gale-Shapley’s algorithm</div>
+                    <div class="lref">[K&P, Chapter 10]</div>
+
+                    <div class="lecture">Lec 11</div>
+                    <div class="ltitle">One-sided matching markets</div>
+                    <div class="lref">[E&K, Chapter 10]</div>
+
+                    <div class="lecture">Lec 12</div>
+                    <div class="ltitle">Revisiting hubs and authorities and PageRank via iterative improvement
+                        algorithms</div>
+                    <div class="lref">[E&K,
+                        Chapter 14]</div>
+
+                    <div class="lecture">Lec 13</div>
+                    <div class="ltitle">Dynamics on networks discussion and information cascades</div>
+                    <div class="lref">[E&K, Chapter 16]</div>
+
+                    <div class="lecture">Lec 14</div>
+                    <div class="ltitle">Diffusion of innovations and cascading on networks</div>
+                    <div class="lref">[E&K, Chapter 19]</div>
+
+                    <div class="lecture">Lec 15</div>
+                    <div class="ltitle">Epidemics modeling</div>
+                    <div class="lref">[E&K, Chapter 21]</div>
+
+                    <div class="lecture">Lec 16</div>
+                    <div class="ltitle">Small world and decentralized search: Watts-Strogatz model</div>
+                    <div class="lref">[E&K, Chapter 20]</div>
+
+                    <div class="lecture">Lec 17</div>
+                    <div class="ltitle">Degree distributions: Erdos-Renyi, Barabasi-Albert, configuration models</div>
+                    <div class="lref">[E&K Chapter
+                        18], [B Chapters 3.4 and 4-5], random-graphs.pdf</div>
+
+                    <div class="lecture">Lec 18</div>
+                    <div class="ltitle">Erdos-Renyi model and emergence of giant component, Stochastic Block model</div>
+                    <div class="lref">[B, Chapter
+                        3], random-graphs.pdf</div>
+                </div>
+            </div>
+        </div>
     </div>
-
-</div>
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/holder.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/holder.min.js"></script>
 </body>
+
 </html>
