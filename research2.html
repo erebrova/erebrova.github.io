@@ -28,17 +28,18 @@
 <body role="document">
 <div class="container" style="background: #FBFBFB; margin-top: 2em; border: 2px #A6A279 double">
     <div class="row">
-        <div class="page-header col-md-10 col-md-offset-1"><h1> Recent papers organized by topic <small><a href="index.html">back to homepage</a></small><!--<img style="height: 1.5em; padding-left: 1em" src="M-logo.png"/>--></h1>
+        <div class="page-header col-md-10 col-md-offset-1"><h1> Selected papers organized by topic <small><a href="index.html">back to homepage</a></small><!--<img style="height: 1.5em; padding-left: 1em" src="M-logo.png"/>--></h1>
         </div>
     </div>
 
     <div class="col-md-offset-0 col-md-11 col-md-pull-0">
         <div class="row" align="center">
-            <a class="btn btn-default btn-lg" href="#nla" role="button"
-               style="margin-right: 1.2em"><small>Randomized linear solvers</small></a>
-            <a class="btn btn-default btn-lg" href="#tensors" role="button" style="margin-right: 1.2em"><small>Tensor data processing</small></a>
-             <a class="btn btn-default btn-lg" href="#rmt" role="button" style="margin-right: 1.2em"><small>Random matrices</small></a>
-             <a class="btn btn-default btn-lg" href="#topics" role="button" style="margin-right: 1.2em"><small>Nonnegative factorizations</small></a>             
+            <a class="btn btn-default btn-lg" href="#nla" role="button" style="margin-right: 1.2em"><small>RandNLA</small></a>
+            <a class="btn btn-default btn-lg" href="#nla" role="button" style="margin-right: 1.2em"><small>Robust solvers</small></a>
+            <a class="btn btn-default btn-lg" href="#tensors" role="button" style="margin-right: 1.2em"><small>Tensors</small></a>
+             <a class="btn btn-default btn-lg" href="#topics" role="button" style="margin-right: 1.2em"><small>NMF</small></a>
+             <a class="btn btn-default btn-lg" href="#topics" role="button" style="margin-right: 1.2em"><small>RMT</small></a> 
+             <a class="btn btn-default btn-lg" href="#topics" role="button" style="margin-right: 1.2em"><small>SGD</small></a>                                                   
              <a class="btn btn-default btn-lg" href="#other" role="button" style="margin-right: 1.2em"><small>Other</small></a>
 
 
@@ -48,56 +49,80 @@
     <div class="row">
         <div class="col-md-offset-1 col-md-10">
 
-            <h2 id="nla"> Randomized numerical linear algebra:</h2>
+            <h2 id="nla"> Randomized NLA:</h2>
             <ul>
                 <li>
                     <dl>
-                        <dt> A subspace constrained randomized Kaczmarz method for structure or external knowledge exploitation </dt>
-                        <dd> ... Jackie Lok, Elizaveta Rebrova </dd>
-                        <dd> ... submitted, <a href="https://arxiv.org/pdf/2309.04889.pdf">arXiv:2309.04889</a></dd>
+                        <dt> Randomized Kaczmarz methods with beyond-Krylov convergence </dt>
+                        <dd> ... with M. Derezinski, D. Needell, J. Yang </dd>
+                        <dd> ... (2025) submitted, <a href="https://arxiv.org/pdf/2501.11673.pdf">arXiv:2501.11673</a></dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt> On Subsampled Quantile Randomized Kaczmarz </dt>
-                        <dd> ... Jamie Haddock, Anna Ma, Elizaveta Rebrova </dd>
-                        <dd> ... Proc. Allerton Conf. on Communication, Control, and Computing, Monticello, IL (2023), <a href="https://arxiv.org/abs/2308.07987">arXiv:2308.07987</a> </dd>
+                        <dt>  Fine-grained analysis and faster algorithms for iteratively solving linear systems </dt>
+                        <dd> ... with M. Derezinski, D. LeJeune, D. Needell </dd>
+                        <dd> ... (2024) submitted, <a href="https://arxiv.org/pdf/2405.05818.pdf">arXiv:2405.05818</a></dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt> Sharp Analysis of Sketch-and-Project Methods via a Connection to Randomized Singular Value Decomposition</dt>
-                        <dd> ... Michal Derezinski, Elizaveta Rebrova </dd>
-                        <dd> ... SIAM Journal on Mathematics of Data Science (SIMODS), to appear, or <a href="https://arxiv.org/abs/2208.09585">arXiv:2208.09585</a></dd>
+                        <dt>  A Subspace Constrained Randomized Kaczmarz method for structure or external knowledge exploitation </dt>
+                        <dd> ... with J. Lok </dd>
+                        <dd> ... (2023) Linear Algebra and its Applications (2024), or <a href="https://arxiv.org/pdf/2309.04889.pdf">arXiv:2309.04889</a></dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt> On Block Accelerations of Quantile Randomized Kaczmarz for Corrupted Systems of Linear Equations </dt>
-                        <dd> ... Lu Cheng, Benjamin Jarman, Deanna Needell, Elizaveta Rebrova </dd>
-                        <dd> ... Inverse Problems, <a href="https://arxiv.org/abs/2206.12554">arXiv:2206.12554</a> </dd>
+                        <dt>  Sharp analysis of sketch-and-project methods via a connection to randomized singular value decomposition</dt>
+                        <dd> ... with M. Derezinski  </dd>
+                        <dd> ... (2023) SIAM Journal on Mathematics of Data Science 6 (1), 127-153, or <a href="https://arxiv.org/abs/2208.09585">arXiv:2208.09585</a></dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                    <dt> Quantile-based Iterative Methods for Corrupted Systems of Linear Equations </dt>
-                    <dd> ... J. Haddock, D. Needell, E. Rebrova, W. Swartworth </dd>
-                    <dd> ...  SIAM Journal on Matrix Analysis and Applications (SIMAX), Vol. 43, No. 2, pp. 605--637, <a href="https://arxiv.org/abs/2009.08089">arXiv:2009.08089</a> and <a href="https://epubs.siam.org/doi/pdf/10.1137/21M1429187">journal</a> versions</dd>
+                        <dt>  On block Gaussian sketching for the Kaczmarz method</dt>
+                        <dd> ... with D. Needell</dd>
+                        <dd> ... (2020) Numerical Algorithms 86 (1), 443-473, or <a href="https://arxiv.org/abs/1905.08894">arXiv:1905.08894</a></dd>
                     </dl>
                 </li>
                 <li>
+                    <dl>
+                        <dt>  Sketching for Motzkin's iterative method for linear systems</dt>
+                        <dd> ... with D. Needell</dd>
+                        <dd> ... (2019) Proc. 50th Asilomar Conference (2019), or <a href="https://arxiv.org/pdf/1912.00771.pdf">arXiv:1912.00771</a></dd>
+                    </dl>
+                </li>
+            </ul>
 
+            <h2 id="robust"> Robust linear solvers:</h2>
+            <ul>
+                <li>
                     <dl>
-                        <dt> On block Gaussian sketching for the Kaczmarz method</dt>
-                        <dd> ... E. Rebrova, D. Needell</dd>
-                        <dd> ... Numerical Algorithms 86 (1), 443-473, or <a href="https://arxiv.org/abs/1905.08894">arXiv:1905.08894</a></dd>
+                        <dt> Stochastic gradient descent for streaming linear and rectified linear systems with adversarial corruptions </dt>
+                        <dd> ... with H. Jeong, D. Needell </dd>
+                        <dd> ... (2024) SIAM Journal on Mathematics of Data Science (SIMODS), to appear, or <a href="https://arxiv.org/pdf/2403.01204.pdf">arXiv:2403.01204</a> </dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt> Sketching for Motzkin's iterative method for linear systems</dt>
-                        <dd> ... E. Rebrova, D. Needell</dd>
-                        <dd> ... Proc. 50th Asilomar Conf. on Signals, Systems and Computers, Pacific Grove, CA (2019), or <a href="https://arxiv.org/abs/1912.00771">arXiv:1912.00771</a></dd>
+                        <dt> On subsampled Quantile Randomized Kaczmarz </dt>
+                        <dd> ... with J. Haddock, A. Ma </dd>
+                        <dd> ... (2023) Proc. Allerton Conference (2023), or <a href="https://arxiv.org/abs/2308.07987">arXiv:2308.07987</a> </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt> On block accelerations of Quantile Randomized Kaczmarz for corrupted systems of linear equations </dt>
+                        <dd> ... with L. Cheng, B. Jarman, D. Needell </dd>
+                        <dd> ... (2022) Inverse Problems 39 (2), 024002, or <a href="https://arxiv.org/abs/2206.12554">arXiv:2206.12554</a> </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                    <dt>  Quantile-based iterative methods for corrupted systems of linear equations </dt>
+                    <dd> ... with J. Haddock, D. Needell, W. Swartworth </dd>
+                    <dd> ...  (2022) SIAM Journal on Matrix Analysis and Applications, 43 (2), 605-637, or <a href="https://arxiv.org/abs/2009.08089">arXiv:2009.08089</a></dd>
                     </dl>
                 </li>
             </ul>
@@ -107,125 +132,158 @@
             <ul>
                 <li>
                     <dl>
-                        <dt> Fast and Low-Memory Compressive Sensing Algorithms for Low Tucker-Rank Tensor Approximation from Streamed Measurements </dt>
-                        <dd> ... C. Haselby, M. Iwen, D. Needell, E. Rebrova, W. Swartworth </dd>
-                        <dd> ... submitted, <a href="https://arxiv.org/pdf/2308.13709.pdf">arXiv:2308.13709</a></dd>
+                        <dt> On trimming tensor-structured measurements and efficient low-rank tensor recovery </dt>
+                        <dd> ... with S. Suryanarayanan </dd>
+                        <dd> ... (2025) submitted, <a href="https://arxiv.org/pdf/2502.02843">arXiv:2502.02843</a></dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt> Modewise Operators, the Tensor Restricted Isometry Property, and Low-Rank Tensor Recovery </dt>
-                        <dd> ... C. Haselby, M. Iwen, D. Needell, M. Perlmutter, E. Rebrova </dd>
-                        <dd> ... Applied and Computational Harmonic Analysis 66, 161-192, <a href="https://pdf.sciencedirectassets.com/272379/1-s2.0-S1063520323X00037/1-s2.0-S1063520323000416/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjECwaCXVzLWVhc3QtMSJHMEUCIQC8%2BGN%2BxcBKeOzOJMt89srbGz4gNf179BzbW%2BRLU%2FS2AQIgZ5o3%2FgaAXPCx8NkTyWy3RRJTnvzk%2F%2BbNIsuFgsMg2ZMqswUINBAFGgwwNTkwMDM1NDY4NjUiDDnY6RyBlkZTQNrngiqQBUI%2FfdkKHd0cQDKkJQJnkEawSo%2B%2F0oGpu6rwcqZT%2FnxxfRMKsZYwVPqDS4MgdsqW3YiC3ruIWddgsh8jr9Pw%2BuEhVSHQc6zJMvOj%2BDglM3pLOFPK6o%2F9ImPrA6%2FRFZqu57HyV8Q8RILQD0pN%2B68DMOyYGHmF%2FgDZwEpDjZA37%2FehK%2FirkZbI9qPGnlzNVjwPgVXpC2DYyIWpmLntKd3Ph3bOVuNcK1EW0SObjmziMR5eC6h8Wdg%2FaNuSveKpkKiv66NdjSJpjD2o8sUnPdTRpZhD5BgiN%2Bk0pbAmsm3%2BOj6Anm2qefCWeD9eSzXPxwdhVRi%2B8jili5rhGxP3RddJZoUUB8f9BvjI1ybMCw4jfCpfsDiACFOyxJu4RDxKdkzdIF5bjHpgYcnp3OFUdUCzVoA558%2F%2F90m0Dey5dqrJIZzlOlaWvTeHDaopit%2FbSkotGvgBCNiyBXcWKPCb2FN0KDqqtzC%2FvCrvW5boD8QAfrz3sGH258%2FwymWBzt77c186t4po3Gj8XSv4l0R%2Bn6JigwcAahlUGOYLBdLRv0s5SI0YYUG1VbUQO1mTXroHipWyblpmjYG5vwpFR0v13lyM7vw28Kkqgld7sXRnnGcbHsE0pWsGuEXXrWbUzw3NrXlHHeIvs7BjV%2BA6or%2BR8S4ikBGfzp%2F74Whl4GD1nV%2FZOKVqMwy6Wjiel27p%2FBMr8wl2ybIJV4r94CoGC%2BzR3B%2F1YpjjRLlhV5mFfDc2h1kv7qGr4uQErucHlkr5el914p59ODA4bl%2FrmsVhu98m%2F%2FZSQdRUDkjj7yJ0fZP1xMIW7hFxvvkfGnlR0aushSNt%2BKXiz%2BvCVHoHSJgI9Cr8IXWKMa%2FgnIkl7M%2BljRrZHxJt7Ia1MOjS8agGOrEB1b8vL7vMfJX9wGKvu4cZ3FudgdBWNUESXUKNW%2BTVkHI2SVNVZTBcW%2FrDzxeWEoAhdx4cmhfuFOyt8rRy0tvTZ9pUBhD1lVEpqr8NA1kUFMlM4FsHUJiLrz1K8oFwkxxMyEE1iwP%2FttB11s8XCTQ%2B0gpdWRqWvovMOZ5cwVRkdrxlO18ImwCJFBpHgJIVr5HhQENPCR5q91Ups1PfFCVEe7sXkNFm4MCaxwx0GQ0CzQqZ&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20231003T200450Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYU4XXURFV%2F20231003%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=21d43d72a805b182ad06b25e9dc73ef15d73992d47b7a3463506b190ee902b7a&hash=e29598bdad1c36e4367a5285ce47baea6482e2c0a3e63487606dd848ea199788&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1063520323000416&tid=spdf-5953face-5d23-49a2-bb62-d3b7e09bc8e8&sid=c93efc4d7984444c1b289e029bc44fa60d4dgxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=0f165c525f530c010053&rr=8107cbe6fe9942aa&cc=us">journal</a> or </a><a href="https://arxiv.org/abs/2109.10454">arXiv:2109.10454</a></dd>
+                        <dt> Fast and low-Memory compressive sensing algorithms for low Tucker-rank tensor approximation from streamed measurements </dt>
+                        <dd> ... with C. Haselby, M. Iwen, D. Needell, W. Swartworth </dd>
+                        <dd> ... (2023) submitted, <a href="https://arxiv.org/pdf/2308.13709.pdf">arXiv:2308.13709</a></dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt> Lower Memory Oblivious (Tensor) Subspace Embeddings with Fewer Random Bits: Modewise Methods for Least Squares</dt>
-                        <dd> ... M. Iwen, D. Needell, E. Rebrova, A. Zare</dd>
+                        <dt> Modewise operators, the tensor restricted isometry property, and low-rank tensor recovery </dt>
+                        <dd> ... with C. Haselby, M. Iwen, D. Needell, M. Perlmutter </dd>
+                        <dd> ... (2023) Applied and Computational Harmonic Analysis 66, 161-192, or </a><a href="https://arxiv.org/abs/2109.10454">arXiv:2109.10454</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt> Lower memory oblivious (tensor) subspace embeddings with fewer random bits: modewise methods for least squares</dt>
+                        <dd> ... with M. Iwen, D. Needell, A. Zare</dd>
                         <dd> ...
-                            SIAM Journal on Matrix Analysis and Applications (SIMAX), to appear, or <a href="https://arxiv.org/abs/1912.08294">arXiv:1912.08294</a></dd>
+                            (2021) SIAM Journal on Matrix Analysis and Applications 42 (1), 376-416 or <a href="https://arxiv.org/abs/1912.08294">arXiv:1912.08294</a></dd>
                     </dl>
                 </li>
             </ul>
             
-            <p></p>
-            <h2 id="rmt"> Non-asymptotic random matrix theory:</h2>
-            <ul>
-                <li>
-                    <dl>
-                        <dt> Constructive regularization of the random matrix norm</dt>
-                        <dd> ... E. Rebrova</dd>
-                        <dd> ... Journal of Theoretical Probability, 33(3), pp 1768-1790 (2020), or <a href="https://arxiv.org/abs/1809.03926">arXiv:1809.03926</a></dd>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt> Norms of random matrices: local and global problems</dt>
-                        <dd> ... E. Rebrova, R. Vershynin</dd>
-                        <dd> ... Advances in Mathematics, Vol. 324, pp 40–83 (2018), or <a href="https://arxiv.org/abs/1608.06953">arXiv:1608.06953</a></dd>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt> Coverings of random ellipsoids, and invertibility of matrices with i.i.d. heavy-tailed entries</dt>
-                        <dd> ... E. Rebrova, K. Tikhomirov</dd>
-                        <dd> ... Israel J. Math., Vol. 227(2), pp 507-544 (2018), or <a href="http://arxiv.org/pdf/1508.06690">arXiv:1508.06690</a></dd>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt> Spectral Properties of Heavy-Tailed Random Matrices (PhD Thesis) </dt>
-                        <dd> ... E. Rebrova </dd>
-                        <dd> ... University of Michigan (2018), see <a href="https://deepblue.lib.umich.edu/bitstream/handle/2027.42/146003/erebrova_1.pdf?sequence=1&isAllowed=y">full text</a> and <a href="defense_presentation.pdf">defense presentation</a></dd>
-                    </dl>
-                </li>
-            </ul>
 
             <p></p>
             <h2 id="topics"> Data analysis via matrix and tensor factorizations:</h2>
             <ul>
                 <li>
                     <dl>
-                        <dt> Sparseness-constrained Nonnegative Tensor Factorization for Detecting Topics at Different Time Scales </dt>
-                        <dd> ... L. Kassab, A. Kryschenko, H.Lyu, D. Molitor, D. Needell, E. Rebrova, J. Yuan </dd>
-                        <dd> ... submitted, <a href="https://arxiv.org/abs/2010.01600">arXiv:2010.01600</a></dd>
+                        <dt> [2024] Learning nonnegative matrix factorizations from compressed data </dt>
+                        <dd> ... with A. Chaudhry </dd>
+                        <dd> ... (2024) submitted, <a href="https://arxiv.org/abs/2409.04994">arXiv:2409.04994</a></dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                    <dt> On A Guided Nonnegative Matrix Factorization</dt>
-                    <dd> ... J. Vendrow, J. Haddock, E. Rebrova, D. Needell </dd>
-                    ... Proc. ICASSP IEEE International Conf. on Acoustics, Speech, and Signal Proc. (2021), or <a href="https://arxiv.org/abs/2010.11365">arXiv:2010.11365</a>
+                        <dt> Sparseness-constrained nonnegative tensor factorization for detecting topics at different time scales </dt>
+                        <dd> ... with L. Kassab, A. Kryschenko, H.Lyu, D. Molitor, D. Needell, J. Yuan </dd>
+                        <dd> ... (2023) Frontiers in Applied Mathematics and Statistics 10, 1287074, or <a href="https://arxiv.org/abs/2010.01600">arXiv:2010.01600</a></dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
-                        <dt>COVID-19 Literature Topic-Based Search via Hierarchical NMF</dt>
-                        <dd> ... R. Grotheer, K. Ha, L. Huang, Y. Huang, A. Kryshchenko, O. Kryshchenko, P. Li, X. Li, D. Needell, E. Rebrova </dd>
-                        <dd> ... Proc. NLP-COVID19-EMNLP (2020), or  <a href="https://openreview.net/pdf?id=toVkbxrY0V5">link</a> </dd>
+                    <dt> On a guided Nonnegative Matrix Factorization</dt>
+                    <dd> ... with J. Vendrow, J. Haddock, D. Needell </dd>
+                    ... (2021) Proc. ICASSP IEEE Conference (2021), or <a href="https://arxiv.org/abs/2010.11365">arXiv:2010.11365</a>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt> COVID-19 literature topic-based search via hierarchical NMF</dt>
+                        <dd> ... with R. Grotheer, K. Ha, L. Huang, Y. Huang, A. Kryshchenko, O. Kryshchenko, P. Li, X. Li, D. Needell </dd>
+                        <dd> ... (2020) Proc. NLP-COVID19-EMNLP Workshop (2020), or  <a href="https://openreview.net/pdf?id=toVkbxrY0V5">link</a> </dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>Analysis of Legal Documents via Non-negative Matrix Factorization Methods</dt>
-                        <dd> ...R. Budahazy, L. Cheng, Y. Huang, A. Johnson, P. Li, J. Vendrow, Z. Wu, D. Molitor, E. Rebrova, D. Needell </dd>
-                        <dd> ... <a href="https://arxiv.org/abs/2104.14028">arXiv:2104.14028</a> </dd>
+                        <dd> ... with R. Budahazy, L. Cheng, Y. Huang, A. Johnson, P. Li, J. Vendrow, Z. Wu, D. Molitor, D. Needell </dd>
+                        <dd> ... (2021) SCIURO undergraduate journal, or <a href="https://arxiv.org/abs/2104.14028">arXiv:2104.14028</a> </dd>
                     </dl>
                 </li>
             </ul>
-            <p></p>
+        <p></p>
+        <h2 id="other"> Dynamic of SGD </h2>
+        <ul>
+            <li>
+                <dl>
+                    <dt> On regularization via early stopping for least squares regression</dt>
+                    <dd> ... with R. Sonthalia, J. Lok </dd>
+                    <dd> ... (2024) submitted, <a href="https://arxiv.org/pdf/2406.04425.pdf">arXiv:2406.04425</a></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt> Discrete error dynamics of mini-batch gradient descent for least squares regression</dt>
+                    <dd> ... with J. Lok, R. Sonthalia </dd>
+                    <dd> ... (2025) Proc. ALT Conference, or <a href="https://arxiv.org/pdf/2406.03696.pdf">arXiv:2406.03696</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <p></p>
+        <h2 id="rmt"> Non-asymptotic random matrix theory:</h2>
+        <ul>
+            <li>
+                <dl>
+                    <dt> Constructive regularization of the random matrix norm</dt>
+                    <dd> E. Rebrova </dd>
+                    <dd> ... (2020) Journal of Theoretical Probability, 33 (3), 1768-1790, or <a href="https://arxiv.org/abs/1809.03926">arXiv:1809.03926</a></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt> Norms of random matrices: local and global problems</dt>
+                    <dd> ... E. Rebrova, R. Vershynin</dd>
+                    <dd> ... (2018) Advances in Mathematics, 324, 40–83, or <a href="https://arxiv.org/abs/1608.06953">arXiv:1608.06953</a></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt> Coverings of random ellipsoids, and invertibility of matrices with i.i.d. heavy-tailed entries</dt>
+                    <dd> ... E. Rebrova, K. Tikhomirov</dd>
+                    <dd> ... (2018) Israel J. Math., 227 (2), 507-544, or <a href="http://arxiv.org/pdf/1508.06690">arXiv:1508.06690</a></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt> Spectral Properties of Heavy-Tailed Random Matrices (PhD Thesis) </dt>
+                    <dd> ... E. Rebrova </dd>
+                    <dd> ... (2018) University of Michigan, see <a href="https://deepblue.lib.umich.edu/bitstream/handle/2027.42/146003/erebrova_1.pdf?sequence=1&isAllowed=y">full text</a> and <a href="defense_presentation.pdf">defense presentation</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <p></p>
         <h2 id="other"> Graph signal processing </h2>
         <ul>
             <li>
                 <dl>
-                    <dt> On Graph Uncertainty Principle and Eigenvector Delocalization</dt>
-                    <dd> ... E. Rebrova, P. Salanevich </dd>
-                    <dd> ... Proc. SAMPTA IEEE Sampling Theory and Applications Conference (2023), <a href="https://openreview.net/pdf?id=p8wFnBshU4">link</a>, or <a href="https://arxiv.org/pdf/2306.15810.pdf">arXiv:2306.15810</a></dd>
+                    <dt> On graph uncertainty principle and eigenvector delocalization</dt>
+                    <dd> ... with P. Salanevich </dd>
+                    <dd> ... (2023) Proc. SAMPTA IEEE Conference, <a href="https://openreview.net/pdf?id=p8wFnBshU4">link</a>, or <a href="https://arxiv.org/pdf/2306.15810.pdf">arXiv:2306.15810</a></dd>
                 </dl>
             </li>
         </ul>
+        <p></p>
         <h2> Scalable linear algebra for machine learning and scientific computing:</h2>
         <ul>
             <li>
                 <dl>
-                    <dt> Scalable and Memory-Efficient Kernel Ridge Regression</dt>
-                    <dd> ... G. Chavez, E. Rebrova, Y. Liu, P. Ghysels and X.S.Li</dd>
-                    <dd> ... Proc. 34th IPDSP IEEE International Parallel and Distributed Processing Symposium (2020), or  <a href="http://www-personal.umich.edu/~liuyangz/docs/KRR_ANN.pdf">link</a> </dd>
+                    <dt> Scalable and memory-efficient kernel ridge regression</dt>
+                    <dd> ... G. Chavez, E. Rebrova, Y. Liu, P. Ghysels, and X. S. Li</dd>
+                    <dd> ... (2020) Proc. 34th IPDSP IEEE Symposium, or  <a href="http://www-personal.umich.edu/~liuyangz/docs/KRR_ANN.pdf">link</a> </dd>
                 </dl>
             </li>
             <li>
                 <dl>
                     <dt> A study of clustering techniques and hierarchical matrix formats for kernel ridge regression</dt>
-                    <dd> ... E. Rebrova, G. Chavez, Y. Liu, P. Ghysels and X.S.Li</dd>
-                    <dd> ... ParLearning (2018), or <a href="https://arxiv.org/abs/1803.10274">arXiv:1803.10274</a></dd>
+                    <dd> ... E. Rebrova, G. Chavez, Y. Liu, P. Ghysels, and X. S. Li</dd>
+                    <dd> ... (2018) IEEE international parallel and distributed processing symposium workshop, or <a href="https://arxiv.org/abs/1803.10274">arXiv:1803.10274</a></dd>
                 </dl>
             </li>
             <li>
                 <dl>
                     <dt> A parallel hierarchical blocked adaptive cross approximation algorithm</dt>
-                    <dd> ... Y. Liu, W. Sid-Lakhdar, E. Rebrova, P. Ghysels and X.S.Li</dd>
-                    <dd> ... International Journal of High Performance Computing Applications, to appear, or <a href="http://www-personal.umich.edu/~liuyangz/docs/hierarchicalLR_IJHPCA.pdf">link</a></dd>
+                    <dd> ... Y. Liu, W. Sid-Lakhdar, E. Rebrova, P. Ghysels, and X. S. Li</dd>
+                    <dd> ... (2020) International Journal of High Perf. Comp. Appl., 34 (4), 394-408, or <a href="http://www-personal.umich.edu/~liuyangz/docs/hierarchicalLR_IJHPCA.pdf">link</a></dd>
                 </dl>
             </li>
         </ul>
