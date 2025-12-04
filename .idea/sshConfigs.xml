@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="tupelo.math.ucla.edu" id="3e253949-cd7d-4a48-8434-048a2594ce9e" port="22" customName="tupelo" nameFormat="CUSTOM" username="rebrova">
+        <option name="customName" value="tupelo" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" host="tupelo.math.ucla.edu" id="21f48697-5121-48f0-a407-e6dd70179863" port="22" customName="tupelo" nameFormat="CUSTOM" username="rebrova">
+        <option name="customName" value="tupelo" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="sftp.itd.umich.edu" id="6ae7a5aa-9b63-4199-98eb-77b8d6d84779" port="22" nameFormat="DESCRIPTIVE" username="erebrova" />
+    </configs>
+  </component>
+</project>

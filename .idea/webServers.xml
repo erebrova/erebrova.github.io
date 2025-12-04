@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="425f3e36-3548-468b-b185-942afdcb846b" name="tupelo" url="http://www.math.ucla.edu/~rebrova">
+        <fileTransfer rootFolder="/net/tupelo/h2/afa/rebrova/public_html" accessType="SFTP" host="tupelo.math.ucla.edu" port="22" sshConfigId="3e253949-cd7d-4a48-8434-048a2594ce9e" sshConfig="tupelo">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="f2fcfff8-e7a1-4c7d-bf03-206a8c400396" name="Umich" url="http://www-personal.umich.edu/~erebrova/">
+        <fileTransfer rootFolder="/afs/umich.edu/user/e/r/erebrova" accessType="SFTP" host="sftp.itd.umich.edu" port="22" sshConfigId="6ae7a5aa-9b63-4199-98eb-77b8d6d84779" sshConfig="erebrova@sftp.itd.umich.edu:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
