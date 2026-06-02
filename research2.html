@@ -35,12 +35,13 @@
     <div class="col-md-offset-0 col-md-11 col-md-pull-0">
         <div class="row" align="center">
             <a class="btn btn-default btn-lg" href="#nla" role="button" style="margin-right: 1.2em"><small>RandNLA</small></a>
-            <a class="btn btn-default btn-lg" href="#nla" role="button" style="margin-right: 1.2em"><small>Robust solvers</small></a>
+            <a class="btn btn-default btn-lg" href="#robust" role="button" style="margin-right: 1.2em"><small>Robust solvers</small></a>
             <a class="btn btn-default btn-lg" href="#tensors" role="button" style="margin-right: 1.2em"><small>Tensors</small></a>
-             <a class="btn btn-default btn-lg" href="#topics" role="button" style="margin-right: 1.2em"><small>NMF</small></a>
-             <a class="btn btn-default btn-lg" href="#topics" role="button" style="margin-right: 1.2em"><small>RMT</small></a> 
-             <a class="btn btn-default btn-lg" href="#topics" role="button" style="margin-right: 1.2em"><small>SGD</small></a>                                                   
-             <a class="btn btn-default btn-lg" href="#other" role="button" style="margin-right: 1.2em"><small>Other</small></a>
+            <a class="btn btn-default btn-lg" href="#topics" role="button" style="margin-right: 1.2em"><small>NMF</small></a>
+            <a class="btn btn-default btn-lg" href="#rmt" role="button" style="margin-right: 1.2em"><small>RMT</small></a>
+            <a class="btn btn-default btn-lg" href="#sgd" role="button" style="margin-right: 1.2em"><small>SGD</small></a>
+            <a class="btn btn-default btn-lg" href="#ml" role="button" style="margin-right: 1.2em"><small>ML</small></a>
+            <a class="btn btn-default btn-lg" href="#other" role="button" style="margin-right: 1.2em"><small>Other</small></a>
 
 
        </div>
@@ -51,13 +52,27 @@
 
             <h2 id="nla"> Randomized NLA:</h2>
             <ul>
-                <li>
-                    <dl>
-                        <dt> Randomized Kaczmarz methods with beyond-Krylov convergence </dt>
-                        <dd> ... with M. Derezinski, D. Needell, J. Yang </dd>
-                        <dd> ... (2025) submitted, <a href="https://arxiv.org/pdf/2501.11673.pdf">arXiv:2501.11673</a></dd>
-                    </dl>
-                </li>
+	                <li>
+	                    <dl>
+	                        <dt> Towards Universal Convergence of Backward Error in Linear System Solvers </dt>
+	                        <dd> ... with M. Derezinski, Y. Nakatsukasa </dd>
+	                        <dd> ... (2026) submitted, <a href="https://arxiv.org/abs/2604.16075">arXiv:2604.16075</a></dd>
+	                    </dl>
+	                </li>
+	                <li>
+	                    <dl>
+	                        <dt> Randomized Kaczmarz methods with beyond-Krylov convergence </dt>
+	                        <dd> ... with M. Derezinski, D. Needell, J. Yang </dd>
+	                        <dd> ... (2025) SIAM Journal on Matrix Analysis and Applications 46 (4), 2558-2588, or <a href="https://arxiv.org/abs/2501.11673">arXiv:2501.11673</a></dd>
+	                    </dl>
+	                </li>
+	                <li>
+	                    <dl>
+	                        <dt> Beyond Expectation: Concentration Inequalities for Randomized Iterative Methods </dt>
+	                        <dd> ... with T. Anderson, M. Collins, J. Haddock, J. Lok </dd>
+	                        <dd> ... (2025) submitted, <a href="https://arxiv.org/abs/2511.20877">arXiv:2511.20877</a></dd>
+	                    </dl>
+	                </li>
                 <li>
                     <dl>
                         <dt>  Fine-grained analysis and faster algorithms for iteratively solving linear systems </dt>
@@ -96,11 +111,18 @@
             </ul>
 
             <h2 id="robust"> Robust linear solvers:</h2>
-            <ul>
-                <li>
-                    <dl>
-                        <dt> Stochastic gradient descent for streaming linear and rectified linear systems with adversarial corruptions </dt>
-                        <dd> ... with H. Jeong, D. Needell </dd>
+	            <ul>
+	                <li>
+	                    <dl>
+	                        <dt> Quantile Randomized Kaczmarz Algorithm with Whitelist Trust Mechanism </dt>
+	                        <dd> ... with S. Shvaiko, L. Huang </dd>
+	                        <dd> ... (2026) Proc. ICASSP IEEE International Conference, pp. 721-725, or <a href="https://arxiv.org/abs/2602.12483">arXiv:2602.12483</a></dd>
+	                    </dl>
+	                </li>
+	                <li>
+	                    <dl>
+	                        <dt> Stochastic gradient descent for streaming linear and rectified linear systems with adversarial corruptions </dt>
+	                        <dd> ... with H. Jeong, D. Needell </dd>
                         <dd> ... (2024) SIAM Journal on Mathematics of Data Science (SIMODS), to appear, or <a href="https://arxiv.org/pdf/2403.01204.pdf">arXiv:2403.01204</a> </dd>
                     </dl>
                 </li>
@@ -202,7 +224,7 @@
                 </li>
             </ul>
         <p></p>
-        <h2 id="other"> Dynamic of SGD </h2>
+	        <h2 id="sgd"> Dynamic of SGD </h2>
         <ul>
             <li>
                 <dl>
@@ -218,9 +240,20 @@
                     <dd> ... (2025) Proc. ALT Conference, or <a href="https://arxiv.org/pdf/2406.03696.pdf">arXiv:2406.03696</a></dd>
                 </dl>
             </li>
-        </ul>
-        <p></p>
-        <h2 id="rmt"> Non-asymptotic random matrix theory:</h2>
+	        </ul>
+	        <p></p>
+	        <h2 id="ml"> Numerical methods for machine learning:</h2>
+	        <ul>
+	            <li>
+	                <dl>
+	                    <dt> Attention Mechanisms Through the Lens of Numerical Methods: Approximation Methods and Alternative Formulations </dt>
+	                    <dd> ... with M. F. Serret, A. Cortinovis, Y. Dong, D. Halikias, A. Ma, F. Matti, D. Needell, K. J. Pearce, D. Shur, and others </dd>
+	                    <dd> ... (2026) submitted, <a href="https://arxiv.org/abs/2604.01757">arXiv:2604.01757</a></dd>
+	                </dl>
+	            </li>
+	        </ul>
+	        <p></p>
+	        <h2 id="rmt"> Non-asymptotic random matrix theory:</h2>
         <ul>
             <li>
                 <dl>
