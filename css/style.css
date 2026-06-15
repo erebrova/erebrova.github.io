@@ -93,6 +93,12 @@ body.home .profile-links {
     padding-top: 8px;
 }
 
+body.home .profile-role {
+    color: #183332;
+    font-size: 20px;
+    margin: 4px 0 18px;
+}
+
 body.home .primary-links {
     margin: 10px 0 14px;
 }
