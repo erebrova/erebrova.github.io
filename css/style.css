@@ -10,3 +10,135 @@ body {
 h2 {
     font-size: 20px;
 }
+
+body.home {
+    background: #dfe6df;
+    color: #202323;
+    font-size: 16px;
+    line-height: 1.62;
+}
+
+body.home .container[style] {
+    max-width: 1040px;
+    background: #fffaf0 !important;
+    border: 0 !important;
+    border-top: 8px solid #2f6f6a !important;
+    box-shadow: 0 22px 60px rgba(36, 49, 48, 0.18);
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 40px;
+}
+
+body.home .page-header {
+    border-bottom: 1px solid #d7c99a;
+    margin-top: 18px !important;
+}
+
+body.home .page-header h1 {
+    color: #183332;
+    font-weight: 500;
+}
+
+body.home h2 {
+    color: #8a4f28;
+    font-size: 21px;
+    font-weight: 600;
+    margin-top: 32px;
+}
+
+body.home a {
+    color: #146b75;
+}
+
+body.home a:hover,
+body.home a:focus {
+    color: #0f4f56;
+}
+
+body.home .btn-default {
+    background: #f2ead4;
+    border-color: #cdbd88;
+    color: #135f67;
+}
+
+body.home .btn-default:hover,
+body.home .btn-default:focus {
+    background: #e8ddb9;
+    border-color: #b79d56;
+    color: #0f4f56;
+}
+
+body.home .col-md-3.col-md-push-1 {
+    left: auto !important;
+    float: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 24px 15px 26px;
+    border-bottom: 1px solid #d7c99a;
+}
+
+body.home .col-md-3.col-md-push-1 > div:first-child {
+    float: left;
+    width: 220px;
+    margin: 0 30px 16px 0 !important;
+}
+
+body.home .col-md-3.col-md-push-1 > div:first-child img {
+    border-radius: 4px;
+    max-height: 285px !important;
+}
+
+body.home .profile-links {
+    max-width: 700px;
+    padding-top: 8px;
+}
+
+body.home .primary-links {
+    margin: 10px 0 14px;
+}
+
+body.home .primary-links .btn {
+    margin: 0 12px 10px 0;
+    min-width: 180px;
+}
+
+body.home .secondary-links {
+    color: #6f6755;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+body.home .keyword-line {
+    border-left: 4px solid #c6a85b;
+    color: #514a3d;
+    font-size: 15px;
+    margin-top: 18px;
+    max-width: 720px;
+    padding: 8px 0 8px 14px;
+}
+
+body.home .col-md-offset-1.col-md-7.col-md-pull-0 {
+    clear: both;
+    float: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-top: 10px;
+}
+
+body.home hr {
+    border-top-color: #dfd3ab;
+}
+
+@media (max-width: 700px) {
+    body.home .container[style] {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    body.home .col-md-3.col-md-push-1 > div:first-child {
+        float: none;
+        width: 100%;
+        max-width: 260px;
+        margin-right: 0 !important;
+    }
+}
