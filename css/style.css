@@ -30,13 +30,11 @@ body.home .container[style] {
 }
 
 body.home .page-header {
-    border-bottom: 1px solid #d7c99a;
-    margin-top: 18px !important;
+    display: none;
 }
 
-body.home .page-header h1 {
-    color: #183332;
-    font-weight: 500;
+body.home .row:first-child {
+    margin: 0;
 }
 
 body.home h2 {
@@ -70,37 +68,53 @@ body.home .btn-default:focus {
 
 body.home .col-md-3.col-md-push-1 {
     left: auto !important;
+    display: flex;
     float: none !important;
+    gap: 42px;
+    align-items: flex-start;
     width: 100% !important;
     margin: 0 !important;
-    padding: 24px 15px 26px;
+    padding: 36px 15px 32px;
     border-bottom: 1px solid #d7c99a;
 }
 
 body.home .col-md-3.col-md-push-1 > div:first-child {
-    float: left;
-    width: 220px;
-    margin: 0 30px 16px 0 !important;
+    flex: 0 0 285px;
+    float: none;
+    width: 285px;
+    margin: 0 !important;
 }
 
 body.home .col-md-3.col-md-push-1 > div:first-child img {
     border-radius: 4px;
-    max-height: 285px !important;
+    max-height: 350px !important;
 }
 
-body.home .profile-links {
-    max-width: 700px;
-    padding-top: 8px;
+body.home .profile-copy {
+    flex: 1 1 auto;
+    max-width: 690px;
+    padding-top: 6px;
+}
+
+body.home .profile-copy h1 {
+    color: #183332;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.12;
+    margin: 0 0 16px;
 }
 
 body.home .profile-role {
     color: #183332;
     font-size: 20px;
-    margin: 4px 0 18px;
+    margin: 0 0 18px;
 }
 
 body.home .primary-links {
-    margin: 10px 0 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 24px 0 14px;
 }
 
 body.home .primary-links .btn {
@@ -118,8 +132,8 @@ body.home .keyword-line {
     border-left: 4px solid #c6a85b;
     color: #514a3d;
     font-size: 15px;
-    margin-top: 18px;
-    max-width: 720px;
+    margin-top: 0;
+    max-width: 620px;
     padding: 8px 0 8px 14px;
 }
 
@@ -146,5 +160,25 @@ body.home hr {
         width: 100%;
         max-width: 260px;
         margin-right: 0 !important;
+    }
+
+    body.home .col-md-3.col-md-push-1 {
+        display: block;
+    }
+
+    body.home .profile-copy,
+    body.home .primary-links {
+        text-align: left;
+        justify-content: flex-start;
+        max-width: none;
+    }
+
+    body.home .profile-copy h1 {
+        font-size: 34px;
+    }
+
+    body.home .primary-links .btn {
+        margin-left: 0;
+        margin-right: 12px;
     }
 }
