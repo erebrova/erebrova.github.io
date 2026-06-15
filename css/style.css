@@ -149,6 +149,13 @@ body.home hr {
     border-top-color: #dfd3ab;
 }
 
+body.home .page-updated {
+    color: #8a877d;
+    font-size: 13px;
+    margin-top: -6px;
+    text-align: left;
+}
+
 @media (max-width: 700px) {
     body.home .container[style] {
         padding-left: 20px;
