@@ -11,7 +11,7 @@
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/papers.css?v=1" rel="stylesheet">
+    <link href="css/papers.css?v=3" rel="stylesheet">
 </head>
 
 <body class="research-page" role="document">
@@ -46,381 +46,9 @@
     </div>
 </div>
 
+<script src="js/papers-data.js?v=6"></script>
 <script>
-const topics = [
-    { id: "all", label: "All topics" },
-    { id: "randnla", label: "RandNLA and Iterative Solvers" },
-    { id: "robust", label: "Robust Randomized Algorithms" },
-    { id: "tensors", label: "Structured Sketching and Recovery" },
-    { id: "factorizations", label: "Low-Rank and Kernel Methods" },
-    { id: "sgd", label: "Optimization, Dynamics, and Regularization" },
-    { id: "rmt", label: "Non-asymptotic Random Matrix Theory" }
-];
-
-const venueTypes = [
-    { id: "all", label: "All venue types" },
-    { id: "preprint", label: "Preprint/submitted" },
-    { id: "journal", label: "Journal" },
-    { id: "conference", label: "Conference/workshop" },
-    { id: "survey", label: "Thesis and surveys" }
-];
-
-const papers = [
-    {
-        title: "Towards Universal Convergence of Backward Error in Linear System Solvers",
-        authors: "with M. Derezinski and Y. Nakatsukasa",
-        year: 2026,
-        venue: "Submitted",
-        topic: "randnla",
-        tags: ["randnla"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2604.16075" }]
-    },
-    {
-        title: "Quantile Randomized Kaczmarz Algorithm with Whitelist Trust Mechanism",
-        authors: "with S. Shvaiko and L. Huang",
-        year: 2026,
-        venue: "Proc. ICASSP IEEE International Conference, pp. 721-725",
-        topic: "robust",
-        tags: ["robust", "randnla"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2602.12483" }]
-    },
-    {
-        title: "Attention Mechanisms Through the Lens of Numerical Methods: Approximation Methods and Alternative Formulations",
-        authors: "with M. F. Serret, A. Cortinovis, Y. Dong, D. Halikias, A. Ma, F. Matti, D. Needell, K. J. Pearce, D. Shur, and others",
-        year: 2026,
-        venue: "arXiv preprint arXiv:2604.01757",
-        venueType: "survey",
-        topic: "factorizations",
-        tags: ["factorizations"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2604.01757" }]
-    },
-    {
-        title: "Data-driven, ML-assisted approaches to problem well-posedness",
-        authors: "with T. Bertalan, G. A. Kevrekidis, E. D. Koronaki, S. Mishra, and Y. Kevrekidis",
-        year: 2026,
-        venue: "PNAS Nexus 5 (6), pgag175",
-        topic: "sgd",
-        tags: ["sgd"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2503.19255" }],
-        bibtex: `@article{bertalan2026data,
-  title={Data-driven, ML-assisted approaches to problem well-posedness},
-  author={Bertalan, T. and Kevrekidis, G. A. and Koronaki, E. D. and Mishra, S. and Rebrova, E. and Kevrekidis, Y.},
-  journal={PNAS Nexus},
-  volume={5},
-  number={6},
-  pages={pgag175},
-  year={2026}
-}`
-    },
-    {
-        title: "Randomized Kaczmarz methods with beyond-Krylov convergence",
-        authors: "with M. Derezinski, D. Needell, and J. Yang",
-        year: 2025,
-        venue: "SIAM Journal on Matrix Analysis and Applications 46 (4), 2558-2588",
-        topic: "randnla",
-        tags: ["randnla"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2501.11673" }]
-    },
-    {
-        title: "Scientific Applications Leveraging Randomized Linear Algebra",
-        authors: "with V. Patel, D. A. Maldonado, M. Melnichenko, N. Pritchard, V. Rao, S. Sankararaman, and M. Schweitzer",
-        year: 2025,
-        venue: "arXiv preprint arXiv:2506.16457",
-        venueType: "survey",
-        topic: "randnla",
-        tags: ["randnla", "factorizations"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2506.16457" }],
-        bibtex: `@article{patel2025scientific,
-  title={Scientific Applications Leveraging Randomized Linear Algebra},
-  author={Patel, Vivak and Maldonado, D. Adrian and Melnichenko, Maksim and Pritchard, Nathaniel and Rao, Vishwas and Rebrova, Elizaveta and Sankararaman, Sriram and Schweitzer, Marcel},
-  journal={arXiv preprint arXiv:2506.16457},
-  year={2025}
-}`
-    },
-    {
-        title: "Subspace-constrained randomized coordinate descent for linear systems with good low-rank matrix approximations",
-        authors: "with J. Lok",
-        year: 2025,
-        venue: "Accepted to SIAM Journal on Matrix Analysis and Applications",
-        topic: "randnla",
-        tags: ["randnla", "factorizations"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2506.09394" }],
-        bibtex: `@article{lok2025subspace,
-  title={Subspace-constrained randomized coordinate descent for linear systems with good low-rank matrix approximations},
-  author={Lok, Jackie and Rebrova, Elizaveta},
-  journal={arXiv preprint arXiv:2506.09394},
-  year={2025}
-}`
-    },
-    {
-        title: "Beyond Expectation: Concentration Inequalities for Randomized Iterative Methods",
-        authors: "with T. Anderson, M. Collins, J. Haddock, and J. Lok",
-        year: 2025,
-        venue: "Submitted",
-        topic: "randnla",
-        tags: ["randnla"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2511.20877" }]
-    },
-    {
-        title: "On trimming tensor-structured measurements and efficient low-rank tensor recovery",
-        authors: "with S. Suryanarayanan",
-        year: 2025,
-        venue: "Submitted",
-        topic: "tensors",
-        tags: ["tensors"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2502.02843" }]
-    },
-    {
-        title: "On regularization via early stopping for least squares regression",
-        authors: "with R. Sonthalia and J. Lok",
-        year: 2025,
-        venue: "Submitted",
-        topic: "sgd",
-        tags: ["sgd"],
-        resources: [{ label: "PDF", url: "EarlyStopping2.pdf" }]
-    },
-    {
-        title: "Discrete error dynamics of mini-batch gradient descent for least squares regression",
-        authors: "with J. Lok and R. Sonthalia",
-        year: 2025,
-        venue: "Proc. ALT Conference",
-        topic: "sgd",
-        tags: ["sgd"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2406.03696.pdf" }]
-    },
-    {
-        title: "Fine-grained analysis and faster algorithms for iteratively solving linear systems",
-        authors: "with M. Derezinski, D. LeJeune, and D. Needell",
-        year: 2025,
-        venue: "Journal of Machine Learning Research 26 (144), 1-49",
-        topic: "randnla",
-        tags: ["randnla"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2405.05818.pdf" }]
-    },
-    {
-        title: "Stochastic gradient descent for streaming linear and rectified linear systems with adversarial corruptions",
-        authors: "with H. Jeong and D. Needell",
-        year: 2025,
-        venue: "SIAM Journal on Mathematics of Data Science 7 (2), 516-541",
-        topic: "robust",
-        tags: ["robust", "sgd"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2403.01204.pdf" }]
-    },
-    {
-        title: "Learning nonnegative matrix factorizations from compressed data",
-        authors: "with A. Chaudhry",
-        year: 2024,
-        venue: "Accepted to SIAM Journal on Matrix Analysis and Applications",
-        topic: "factorizations",
-        tags: ["factorizations"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2409.04994" }]
-    },
-    {
-        title: "A Subspace Constrained Randomized Kaczmarz method for structure or external knowledge exploitation",
-        authors: "with J. Lok",
-        year: 2024,
-        venue: "Linear Algebra and its Applications 698, 220-260",
-        topic: "randnla",
-        tags: ["randnla"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2309.04889.pdf" }]
-    },
-    {
-        title: "Sharp analysis of sketch-and-project methods via a connection to randomized singular value decomposition",
-        authors: "with M. Derezinski",
-        year: 2024,
-        venue: "SIAM Journal on Mathematics of Data Science 6 (1), 127-153",
-        topic: "randnla",
-        tags: ["randnla"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2208.09585" }]
-    },
-    {
-        title: "On subsampled Quantile Randomized Kaczmarz",
-        authors: "with J. Haddock and A. Ma",
-        year: 2023,
-        venue: "Proc. Allerton Conference",
-        topic: "robust",
-        tags: ["robust", "randnla"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2308.07987" }]
-    },
-    {
-        title: "Fast and low-Memory compressive sensing algorithms for low Tucker-rank tensor approximation from streamed measurements",
-        authors: "with C. Haselby, M. Iwen, D. Needell, and W. Swartworth",
-        year: 2025,
-        venue: "Numerical Algorithms, 1-63",
-        topic: "tensors",
-        tags: ["tensors"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2308.13709.pdf" }]
-    },
-    {
-        title: "Modewise operators, the tensor restricted isometry property, and low-rank tensor recovery",
-        authors: "with C. Haselby, M. Iwen, D. Needell, and M. Perlmutter",
-        year: 2023,
-        venue: "Applied and Computational Harmonic Analysis 66, 161-192",
-        topic: "tensors",
-        tags: ["tensors"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2109.10454" }]
-    },
-    {
-        title: "Sparseness-constrained nonnegative tensor factorization for detecting topics at different time scales",
-        authors: "with L. Kassab, A. Kryschenko, H. Lyu, D. Molitor, D. Needell, and J. Yuan",
-        year: 2023,
-        venue: "Frontiers in Applied Mathematics and Statistics 10, 1287074",
-        topic: "factorizations",
-        tags: ["factorizations", "tensors"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2010.01600" }]
-    },
-    {
-        title: "On graph uncertainty principle and eigenvector delocalization",
-        authors: "with P. Salanevich",
-        year: 2023,
-        venue: "Proc. SAMPTA IEEE Conference",
-        topic: "rmt",
-        tags: ["rmt"],
-        resources: [
-            { label: "openreview", url: "https://openreview.net/pdf?id=p8wFnBshU4" },
-            { label: "arXiv", url: "https://arxiv.org/pdf/2306.15810.pdf" }
-        ]
-    },
-    {
-        title: "On block accelerations of Quantile Randomized Kaczmarz for corrupted systems of linear equations",
-        authors: "with L. Cheng, B. Jarman, and D. Needell",
-        year: 2022,
-        venue: "Inverse Problems 39 (2), 024002",
-        topic: "robust",
-        tags: ["robust", "randnla"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2206.12554" }]
-    },
-    {
-        title: "Quantile-based iterative methods for corrupted systems of linear equations",
-        authors: "with J. Haddock, D. Needell, and W. Swartworth",
-        year: 2022,
-        venue: "SIAM Journal on Matrix Analysis and Applications 43 (2), 605-637",
-        topic: "robust",
-        tags: ["robust", "randnla"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2009.08089" }]
-    },
-    {
-        title: "Lower memory oblivious (tensor) subspace embeddings with fewer random bits: modewise methods for least squares",
-        authors: "with M. Iwen, D. Needell, and A. Zare",
-        year: 2021,
-        venue: "SIAM Journal on Matrix Analysis and Applications 42 (1), 376-416",
-        topic: "tensors",
-        tags: ["tensors", "randnla"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/1912.08294" }]
-    },
-    {
-        title: "On a guided Nonnegative Matrix Factorization",
-        authors: "with J. Vendrow, J. Haddock, and D. Needell",
-        year: 2021,
-        venue: "Proc. ICASSP IEEE Conference",
-        topic: "factorizations",
-        tags: ["factorizations"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2010.11365" }]
-    },
-    {
-        title: "Analysis of Legal Documents via Non-negative Matrix Factorization Methods",
-        authors: "with R. Budahazy, L. Cheng, Y. Huang, A. Johnson, P. Li, J. Vendrow, Z. Wu, and D. Molitor",
-        year: 2021,
-        venue: "SCIURO undergraduate journal",
-        topic: "factorizations",
-        tags: ["factorizations"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2104.14028" }]
-    },
-    {
-        title: "On block Gaussian sketching for the Kaczmarz method",
-        authors: "with D. Needell",
-        year: 2020,
-        venue: "Numerical Algorithms 86 (1), 443-473",
-        topic: "randnla",
-        tags: ["randnla"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/1905.08894" }]
-    },
-    {
-        title: "COVID-19 literature topic-based search via hierarchical NMF",
-        authors: "with R. Grotheer, K. Ha, L. Huang, Y. Huang, A. Kryshchenko, O. Kryshchenko, P. Li, X. Li, and D. Needell",
-        year: 2020,
-        venue: "Proc. NLP-COVID19-EMNLP Workshop",
-        topic: "factorizations",
-        tags: ["factorizations"],
-        resources: [{ label: "openreview", url: "https://openreview.net/pdf?id=toVkbxrY0V5" }]
-    },
-    {
-        title: "Constructive regularization of the random matrix norm",
-        authors: "E. Rebrova",
-        year: 2020,
-        venue: "Journal of Theoretical Probability 33 (3), 1768-1790",
-        topic: "rmt",
-        tags: ["rmt"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/1809.03926" }]
-    },
-    {
-        title: "Scalable and memory-efficient kernel ridge regression",
-        authors: "with G. Chavez, Y. Liu, P. Ghysels, and X. S. Li",
-        year: 2020,
-        venue: "Proc. 34th IPDSP IEEE Symposium",
-        topic: "factorizations",
-        tags: ["factorizations"],
-        resources: [{ label: "PDF", url: "http://www-personal.umich.edu/~liuyangz/docs/KRR_ANN.pdf" }]
-    },
-    {
-        title: "A parallel hierarchical blocked adaptive cross approximation algorithm",
-        authors: "with Y. Liu, W. Sid-Lakhdar, P. Ghysels, and X. S. Li",
-        year: 2020,
-        venue: "International Journal of High Performance Computing Applications 34 (4), 394-408",
-        topic: "factorizations",
-        tags: ["factorizations"],
-        resources: [{ label: "PDF", url: "http://www-personal.umich.edu/~liuyangz/docs/hierarchicalLR_IJHPCA.pdf" }]
-    },
-    {
-        title: "Sketching for Motzkin's iterative method for linear systems",
-        authors: "with D. Needell",
-        year: 2019,
-        venue: "Proc. 50th Asilomar Conference",
-        topic: "randnla",
-        tags: ["randnla"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/1912.00771.pdf" }]
-    },
-    {
-        title: "Norms of random matrices: local and global problems",
-        authors: "with R. Vershynin",
-        year: 2018,
-        venue: "Advances in Mathematics 324, 40-83",
-        topic: "rmt",
-        tags: ["rmt"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/1608.06953" }]
-    },
-    {
-        title: "Coverings of random ellipsoids, and invertibility of matrices with i.i.d. heavy-tailed entries",
-        authors: "with K. Tikhomirov",
-        year: 2018,
-        venue: "Israel Journal of Mathematics 227 (2), 507-544",
-        topic: "rmt",
-        tags: ["rmt"],
-        resources: [{ label: "arXiv", url: "http://arxiv.org/pdf/1508.06690" }]
-    },
-    {
-        title: "Spectral Properties of Heavy-Tailed Random Matrices (Ph.D. Thesis)",
-        authors: "E. Rebrova",
-        year: 2018,
-        venue: "University of Michigan",
-        topic: "rmt",
-        tags: ["rmt"],
-        resources: [
-            { label: "full text", url: "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/146003/erebrova_1.pdf?sequence=1&isAllowed=y" },
-            { label: "slides", url: "defense_presentation.pdf" }
-        ]
-    },
-    {
-        title: "A study of clustering techniques and hierarchical matrix formats for kernel ridge regression",
-        authors: "with G. Chavez, Y. Liu, P. Ghysels, and X. S. Li",
-        year: 2018,
-        venue: "IEEE International Parallel and Distributed Processing Symposium Workshop",
-        topic: "factorizations",
-        tags: ["factorizations"],
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/1803.10274" }]
-    }
-];
-
+const { topics, venueTypes, papers } = window.papersData;
 let currentView = "newest";
 let currentTopic = "all";
 const topicMap = new Map(topics.map(topic => [topic.id, topic.label]));
@@ -468,6 +96,25 @@ function filteredPapers() {
     });
 }
 
+function arxivBibtex(paper) {
+    if (!paper.arxivId || !paper.bibtexKey || !paper.bibtexAuthors) return "";
+
+    return `@article{${paper.bibtexKey},
+  title={${paper.title}},
+  author={${paper.bibtexAuthors}},
+  journal={arXiv preprint arXiv:${paper.arxivId}},
+  year={${paper.arxivYear || paper.year}}
+}`;
+}
+
+function paperBibtex(paper) {
+    return paper.bibtex || arxivBibtex(paper);
+}
+
+function resourceClass(label) {
+    return `resource-link resource-link-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+}
+
 function paperCard(paper) {
     const article = document.createElement("article");
     article.className = "paper-card";
@@ -487,23 +134,25 @@ function paperCard(paper) {
     venue.textContent = `${paper.year} · ${paper.venue}`;
     article.appendChild(venue);
 
+    const bibtexText = paperBibtex(paper);
     let bibtexBlock;
-    if ((paper.resources && paper.resources.length) || paper.bibtex) {
+    if ((paper.resources && paper.resources.length) || bibtexText) {
         const resources = document.createElement("div");
         resources.className = "resource-links";
         (paper.resources || []).forEach(resource => {
             const link = document.createElement("a");
-            link.className = "resource-link";
+            link.className = resourceClass(resource.label);
             link.href = resource.url;
             link.textContent = resource.label;
             resources.appendChild(link);
         });
 
-        if (paper.bibtex) {
+        if (bibtexText) {
             const bibtexButton = document.createElement("button");
-            bibtexButton.className = "resource-link bibtex-toggle";
+            bibtexButton.className = "resource-link resource-link-bibtex bibtex-toggle";
             bibtexButton.type = "button";
             bibtexButton.textContent = "BibTeX";
+            bibtexButton.setAttribute("aria-expanded", "false");
             bibtexButton.addEventListener("click", () => {
                 const expanded = bibtexButton.getAttribute("aria-expanded") === "true";
                 bibtexButton.setAttribute("aria-expanded", String(!expanded));
@@ -515,11 +164,11 @@ function paperCard(paper) {
         article.appendChild(resources);
     }
 
-    if (paper.bibtex) {
+    if (bibtexText) {
         bibtexBlock = document.createElement("pre");
         bibtexBlock.className = "bibtex-block";
         bibtexBlock.hidden = true;
-        bibtexBlock.textContent = paper.bibtex;
+        bibtexBlock.textContent = bibtexText;
         article.appendChild(bibtexBlock);
     }
 
@@ -591,8 +240,7 @@ function render() {
     } else {
         renderList(items);
     }
-    const topicLabel = currentTopic === "all" ? "all topics" : topicMap.get(currentTopic);
-    count.textContent = `${items.length} papers · ${topicLabel}`;
+    count.textContent = `${items.length} ${items.length === 1 ? "paper" : "papers"}`;
 }
 
 render();

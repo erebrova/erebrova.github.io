@@ -177,7 +177,40 @@ body.research-page a:focus {
     border-radius: 4px;
     color: #135f67;
     font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
     padding: 4px 8px;
+    text-align: center;
+}
+
+.resource-link-arxiv,
+.resource-link-pdf {
+    background: #fffdf7;
+    border-color: #2f6f6a;
+    color: #135f67;
+    min-width: 54px;
+}
+
+.resource-link-code {
+    background: #2f6f6a;
+    border-color: #2f6f6a;
+    color: #fff !important;
+    font-weight: 700;
+    min-width: 68px;
+}
+
+.resource-link-slides {
+    background: #f8edcf;
+    border-color: #c6a85b;
+    color: #7b4a1f;
+    min-width: 62px;
+}
+
+.resource-link-bibtex {
+    background: #f8f4e8;
+    border-color: #dfd3ab;
+    color: #6d6a60;
+    font-weight: 500;
 }
 
 button.resource-link {
@@ -191,6 +224,12 @@ button.resource-link {
 .resource-link:focus {
     background: #e8ddb9;
     text-decoration: none;
+}
+
+.resource-link-code:hover,
+.resource-link-code:focus {
+    background: #245d59;
+    border-color: #245d59;
 }
 
 .bibtex-block {
