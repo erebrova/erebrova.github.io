@@ -11,7 +11,7 @@
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/papers.css?v=3" rel="stylesheet">
+    <link href="css/papers.css?v=6" rel="stylesheet">
 </head>
 
 <body class="research-page" role="document">
@@ -46,7 +46,7 @@
     </div>
 </div>
 
-<script src="js/papers-data.js?v=6"></script>
+<script src="js/papers-data.js?v=15"></script>
 <script>
 const { topics, venueTypes, papers } = window.papersData;
 let currentView = "newest";
@@ -100,7 +100,7 @@ function arxivBibtex(paper) {
     if (!paper.arxivId || !paper.bibtexKey || !paper.bibtexAuthors) return "";
 
     return `@article{${paper.bibtexKey},
-  title={${paper.title}},
+  title={${bibtexTitle(paper.title)}},
   author={${paper.bibtexAuthors}},
   journal={arXiv preprint arXiv:${paper.arxivId}},
   year={${paper.arxivYear || paper.year}}
@@ -111,8 +111,73 @@ function paperBibtex(paper) {
     return paper.bibtex || arxivBibtex(paper);
 }
 
+function bibtexTitle(title) {
+    const protectedTerms = [
+        ["Kaczmarz", "{K}aczmarz"],
+        ["Krylov", "{K}rylov"],
+        ["Tucker", "{T}ucker"],
+        ["Motzkin", "{M}otzkin"],
+        ["Gaussian", "{G}aussian"],
+        ["Quantile", "{Q}uantile"],
+        ["Randomized", "{R}andomized"],
+        ["COVID-19", "{COVID}-19"],
+        ["NMF", "{NMF}"],
+        ["ML", "{ML}"],
+        ["ADMM", "{ADMM}"],
+        ["SGD", "{SGD}"],
+        ["SVD", "{SVD}"]
+    ];
+    return protectedTerms.reduce((result, [term, replacement]) => {
+        return result.replaceAll(term, replacement);
+    }, title);
+}
+
 function resourceClass(label) {
     return `resource-link resource-link-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+}
+
+function appendVenuePart(element, text, className) {
+    if (!text) return;
+    const span = document.createElement("span");
+    span.className = className;
+    span.textContent = text;
+    element.appendChild(span);
+}
+
+function renderVenueStatus(element, paper) {
+    const venue = paper.venue || "";
+    if (venue === "Submitted") {
+        appendVenuePart(element, "Submitted", "venue-status");
+        if (paper.arxivId) {
+            appendVenuePart(element, ` · arXiv:${paper.arxivId}`, "venue-status");
+        }
+        return;
+    }
+
+    if (venue.startsWith("arXiv preprint") && paper.arxivId) {
+        appendVenuePart(element, `arXiv:${paper.arxivId}`, "venue-status");
+        return;
+    }
+
+    appendVenuePart(element, venue, "venue-status");
+}
+
+function renderVenue(element, paper) {
+    appendVenuePart(element, `${paper.year} · `, "venue-year");
+
+    if (!paper.venueName) {
+        renderVenueStatus(element, paper);
+        return;
+    }
+
+    if (paper.venuePrefix) {
+        appendVenuePart(element, `${paper.venuePrefix} `, "venue-prefix");
+    }
+    appendVenuePart(element, paper.venueName, "venue-name");
+    if (paper.venueDetails) {
+        const separator = /^[,.;:]/.test(paper.venueDetails) ? "" : " ";
+        appendVenuePart(element, `${separator}${paper.venueDetails}`, "venue-detail");
+    }
 }
 
 function paperCard(paper) {
@@ -131,7 +196,7 @@ function paperCard(paper) {
 
     const venue = document.createElement("div");
     venue.className = "paper-venue";
-    venue.textContent = `${paper.year} · ${paper.venue}`;
+    renderVenue(venue, paper);
     article.appendChild(venue);
 
     const bibtexText = paperBibtex(paper);

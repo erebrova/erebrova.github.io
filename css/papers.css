@@ -158,6 +158,18 @@ body.research-page a:focus {
     margin-bottom: 5px;
 }
 
+.paper-venue .venue-name {
+    color: #464f48;
+    font-weight: 500;
+}
+
+.paper-venue .venue-year,
+.paper-venue .venue-prefix,
+.paper-venue .venue-detail,
+.paper-venue .venue-status {
+    color: #6f695c;
+}
+
 .paper-topics {
     color: #8a877d;
     font-size: 13px;
@@ -192,9 +204,9 @@ body.research-page a:focus {
 }
 
 .resource-link-code {
-    background: #2f6f6a;
+    background: #e8f1ec;
     border-color: #2f6f6a;
-    color: #fff !important;
+    color: #135f67 !important;
     font-weight: 700;
     min-width: 68px;
 }
@@ -228,7 +240,7 @@ button.resource-link {
 
 .resource-link-code:hover,
 .resource-link-code:focus {
-    background: #245d59;
+    background: #d9ebe5;
     border-color: #245d59;
 }
 
