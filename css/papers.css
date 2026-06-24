@@ -11,9 +11,35 @@ body.research-page .page-header {
     margin-top: 18px !important;
 }
 
-body.research-page .page-header h1 {
+.papers-header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    justify-content: space-between;
+}
+
+body.research-page .papers-header h1 {
     color: #183332;
     font-weight: 500;
+    margin-right: auto;
+}
+
+.home-link {
+    background: #f2ead4;
+    border: 1px solid #cdbd88;
+    border-radius: 4px;
+    color: #135f67;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 9px;
+}
+
+.home-link:hover,
+.home-link:focus {
+    background: #e8dfc4;
+    color: #0f4f56;
+    text-decoration: none;
 }
 
 body.research-page h2 {
@@ -33,9 +59,20 @@ body.research-page a:focus {
 }
 
 .research-intro {
+    border-bottom: 1px solid #dfd3ab;
     color: #514a3d;
     font-size: 15px;
+    margin: 0;
     max-width: 860px;
+    padding: 0 0 12px;
+}
+
+.research-intro p {
+    margin: 0 0 7px;
+}
+
+.research-intro p:last-child {
+    margin-bottom: 0;
 }
 
 .research-controls {
