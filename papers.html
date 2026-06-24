@@ -11,7 +11,7 @@
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/papers.css?v=6" rel="stylesheet">
+    <link href="css/papers.css?v=7" rel="stylesheet">
 </head>
 
 <body class="research-page" role="document">
@@ -46,7 +46,7 @@
     </div>
 </div>
 
-<script src="js/papers-data.js?v=15"></script>
+<script src="js/papers-data.js?v=24"></script>
 <script>
 const { topics, venueTypes, papers } = window.papersData;
 let currentView = "newest";
@@ -162,8 +162,19 @@ function renderVenueStatus(element, paper) {
     appendVenuePart(element, venue, "venue-status");
 }
 
+function appendVenueSeparator(element) {
+    appendVenuePart(element, " · ", "venue-separator");
+}
+
 function renderVenue(element, paper) {
-    appendVenuePart(element, `${paper.year} · `, "venue-year");
+    appendVenuePart(element, String(paper.year), "venue-year");
+
+    if (paper.displayType) {
+        appendVenueSeparator(element);
+        appendVenuePart(element, paper.displayType, "venue-kind");
+    }
+
+    appendVenueSeparator(element);
 
     if (!paper.venueName) {
         renderVenueStatus(element, paper);

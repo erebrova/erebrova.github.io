@@ -164,6 +164,8 @@ body.research-page a:focus {
 }
 
 .paper-venue .venue-year,
+.paper-venue .venue-kind,
+.paper-venue .venue-separator,
 .paper-venue .venue-prefix,
 .paper-venue .venue-detail,
 .paper-venue .venue-status {

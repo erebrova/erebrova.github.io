@@ -3,7 +3,7 @@ const topics = [
     { id: "all", label: "All topics" },
     { id: "randnla", label: "RandNLA and Iterative Solvers" },
     { id: "robust", label: "Robust Randomized Algorithms" },
-    { id: "tensors", label: "Structured Sketching and Recovery" },
+    { id: "tensors", label: "Tensor Sketching and Recovery" },
     { id: "factorizations", label: "Low-Rank and Kernel Methods" },
     { id: "sgd", label: "Optimization, Dynamics, and Regularization" },
     { id: "rmt", label: "Non-asymptotic Random Matrix Theory" }
@@ -64,13 +64,17 @@ const papers = [
         year: 2026,
         venue: "arXiv preprint arXiv:2604.01757",
         venueType: "survey",
+        displayType: "Survey",
         topic: "factorizations",
         tags: ["factorizations"],
         arxivId: "2604.01757",
         arxivYear: 2026,
         bibtexKey: "serret2026attention",
         bibtexAuthors: "Michel Fabrice Serret and Alice Cortinovis and Yijun Dong and Diana Halikias and Anna Ma and Fabio Matti and Deanna Needell and Katherine J. Pearce and Elizaveta Rebrova and Disha Shur and Rudi Smith and Hai-Xiao Wang and Laura Grigori",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2604.01757" }]
+        resources: [
+            { label: "arXiv", url: "https://arxiv.org/abs/2604.01757" },
+            { label: "Code", url: "https://github.com/rnla-transformers/qkv_extractor" }
+        ]
     },
     {
         title: "Data-driven, ML-assisted approaches to problem well-posedness",
@@ -112,7 +116,20 @@ const papers = [
         arxivYear: 2025,
         bibtexKey: "derezinski2025randomized",
         bibtexAuthors: "Micha{\l} Derezi{\'n}ski and Deanna Needell and Elizaveta Rebrova and Jiaming Yang",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2501.11673" }]
+        resources: [
+            { label: "arXiv", url: "https://arxiv.org/abs/2501.11673" },
+            { label: "Code", url: "https://github.com/EdwinYang7/kaczmarz-plusplus" }
+        ],
+        bibtex: `@article{derezinski2025randomized,
+  title={{R}andomized {K}aczmarz methods with beyond-{K}rylov convergence},
+  author={Derezi{\\'n}ski, Micha{\\l} and Needell, Deanna and Rebrova, Elizaveta and Yang, Jiaming},
+  journal={SIAM Journal on Matrix Analysis and Applications},
+  volume={46},
+  number={4},
+  pages={2558--2588},
+  year={2025},
+  publisher={SIAM}
+}`
     },
     {
         title: "Scientific Applications Leveraging Randomized Linear Algebra",
@@ -120,6 +137,7 @@ const papers = [
         year: 2025,
         venue: "arXiv preprint arXiv:2506.16457",
         venueType: "survey",
+        displayType: "Survey",
         topic: "randnla",
         tags: ["randnla", "factorizations"],
         arxivId: "2506.16457",
@@ -148,7 +166,10 @@ const papers = [
         arxivYear: 2025,
         bibtexKey: "lok2025subspace",
         bibtexAuthors: "Jackie Lok and Elizaveta Rebrova",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2506.09394" }],
+        resources: [
+            { label: "arXiv", url: "https://arxiv.org/abs/2506.09394" },
+            { label: "Code", url: "https://github.com/jackielok/subspace-constrained-rcd" }
+        ],
         bibtex: `@article{lok2025subspace,
   title={Subspace-constrained randomized coordinate descent for linear systems with good low-rank matrix approximations},
   author={Lok, Jackie and Rebrova, Elizaveta},
@@ -180,7 +201,10 @@ const papers = [
         arxivYear: 2025,
         bibtexKey: "suryanarayanan2025trimming",
         bibtexAuthors: "Shambhavi Suryanarayanan and Elizaveta Rebrova",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2502.02843" }]
+        resources: [
+            { label: "arXiv", url: "https://arxiv.org/pdf/2502.02843" },
+            { label: "Code", url: "https://github.com/shambhavi-suri/Low-Rank-Tensor-Recovery" }
+        ]
     },
     {
         title: "On regularization via early stopping for least squares regression",
@@ -224,7 +248,16 @@ const papers = [
         arxivYear: 2024,
         bibtexKey: "derezinski2025fine",
         bibtexAuthors: "Micha{\l} Derezi{\'n}ski and Daniel LeJeune and Deanna Needell and Elizaveta Rebrova",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2405.05818.pdf" }]
+        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2405.05818.pdf" }],
+        bibtex: `@article{derezinski2025fine,
+  title={Fine-grained analysis and faster algorithms for iteratively solving linear systems},
+  author={Derezi{\\'n}ski, Micha{\\l} and LeJeune, Daniel and Needell, Deanna and Rebrova, Elizaveta},
+  journal={Journal of Machine Learning Research},
+  volume={26},
+  number={144},
+  pages={1--49},
+  year={2025}
+}`
     },
     {
         title: "Stochastic gradient descent for streaming linear and rectified linear systems with adversarial corruptions",
@@ -239,7 +272,16 @@ const papers = [
         arxivYear: 2024,
         bibtexKey: "jeong2025stochastic",
         bibtexAuthors: "Halyun Jeong and Deanna Needell and Elizaveta Rebrova",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2403.01204.pdf" }]
+        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2403.01204.pdf" }],
+        bibtex: `@article{jeong2025stochastic,
+  title={Stochastic gradient descent for streaming linear and rectified linear systems with adversarial corruptions},
+  author={Jeong, Halyun and Needell, Deanna and Rebrova, Elizaveta},
+  journal={SIAM Journal on Mathematics of Data Science},
+  volume={7},
+  number={2},
+  pages={516--541},
+  year={2025}
+}`
     },
     {
         title: "Learning nonnegative matrix factorizations from compressed data",
@@ -270,7 +312,16 @@ const papers = [
         arxivYear: 2023,
         bibtexKey: "lok2024subspace",
         bibtexAuthors: "Jackie Lok and Elizaveta Rebrova",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2309.04889.pdf" }]
+        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2309.04889.pdf" }],
+        bibtex: `@article{lok2024subspace,
+  title={A subspace constrained randomized {K}aczmarz method for structure or external knowledge exploitation},
+  author={Lok, Jackie and Rebrova, Elizaveta},
+  journal={Linear Algebra and its Applications},
+  volume={698},
+  pages={220--260},
+  year={2024},
+  publisher={Elsevier}
+}`
     },
     {
         title: "Sharp analysis of sketch-and-project methods via a connection to randomized singular value decomposition",
@@ -311,7 +362,15 @@ const papers = [
         arxivYear: 2023,
         bibtexKey: "haddock2023subsampled",
         bibtexAuthors: "Jamie Haddock and Anna Ma and Elizaveta Rebrova",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2308.07987" }]
+        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2308.07987" }],
+        bibtex: `@inproceedings{haddock2023subsampled,
+  title={On subsampled quantile randomized {K}aczmarz},
+  author={Haddock, Jamie and Ma, Anna and Rebrova, Elizaveta},
+  booktitle={2023 59th Annual Allerton Conference on Communication, Control, and Computing (Allerton)},
+  pages={1--8},
+  year={2023},
+  organization={IEEE}
+}`
     },
     {
         title: "Fast and low-memory compressive sensing algorithms for low Tucker-rank tensor approximation from streamed measurements",
@@ -326,7 +385,10 @@ const papers = [
         arxivYear: 2023,
         bibtexKey: "haselby2026fast",
         bibtexAuthors: "Cullen Haselby and Mark A. Iwen and Deanna Needell and Elizaveta Rebrova and William Swartworth",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/2308.13709.pdf" }],
+        resources: [
+            { label: "arXiv", url: "https://arxiv.org/pdf/2308.13709.pdf" },
+            { label: "Code", url: "https://github.com/cahaselby/leave_one_out_recovery" }
+        ],
         bibtex: `@article{haselby2026fast,
   title={Fast and low-memory compressive sensing algorithms for low {T}ucker-rank tensor approximation from streamed measurements},
   author={Haselby, Cullen and Iwen, Mark A and Needell, Deanna and Rebrova, Elizaveta and Swartworth, William},
@@ -340,7 +402,7 @@ const papers = [
     },
     {
         title: "Modewise operators, the tensor restricted isometry property, and low-rank tensor recovery",
-        authors: "M. A. Iwen, D. Needell, M. Perlmutter, E. Rebrova",
+        authors: "C. A. Haselby, M. A. Iwen, D. Needell, M. Perlmutter, E. Rebrova",
         year: 2023,
         venue: "Applied and Computational Harmonic Analysis 66, 161-192",
         venueName: "ACHA",
@@ -350,13 +412,24 @@ const papers = [
         arxivId: "2109.10454",
         arxivYear: 2021,
         bibtexKey: "haselby2023modewise",
-        bibtexAuthors: "Mark A. Iwen and Deanna Needell and Michael Perlmutter and Elizaveta Rebrova",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2109.10454" }]
+        bibtexAuthors: "Cullen A. Haselby and Mark A. Iwen and Deanna Needell and Michael Perlmutter and Elizaveta Rebrova",
+        resources: [
+            { label: "PDF", url: "modewise-paper.pdf" },
+            { label: "Code", url: "https://github.com/MichaelPerlmutter/ModewiseTrip" }
+        ],
+        bibtex: `@article{haselby2023modewise,
+  title={{M}odewise operators, the {T}ensor {R}estricted {I}sometry {P}roperty, and low-rank tensor recovery},
+  author={Haselby, Cullen A. and Iwen, Mark A. and Needell, Deanna and Perlmutter, Michael and Rebrova, Elizaveta},
+  journal={Applied and Computational Harmonic Analysis},
+  volume={66},
+  pages={161--192},
+  year={2023}
+}`
     },
     {
         title: "Sparseness-constrained nonnegative tensor factorization for detecting topics at different time scales",
         authors: "L. Kassab, A. Kryshchenko, H. Lyu, D. Molitor, D. Needell, E. Rebrova, J. Yuan",
-        year: 2023,
+        year: 2024,
         venue: "Frontiers in Applied Mathematics and Statistics 10, 1287074",
         venueName: "Frontiers in Applied Mathematics and Statistics",
         venueDetails: "10, 1287074",
@@ -366,7 +439,15 @@ const papers = [
         arxivYear: 2020,
         bibtexKey: "kassab2024sparseness",
         bibtexAuthors: "Lara Kassab and Alona Kryshchenko and Hanbaek Lyu and Denali Molitor and Deanna Needell and Elizaveta Rebrova and Jiahong Yuan",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2010.01600" }]
+        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2010.01600" }],
+        bibtex: `@article{kassab2024sparseness,
+  title={Sparseness-constrained nonnegative tensor factorization for detecting topics at different time scales},
+  author={Kassab, Lara and Kryshchenko, Alona and Lyu, Hanbaek and Molitor, Denali and Needell, Deanna and Rebrova, Elizaveta and Yuan, Jiahong},
+  journal={Frontiers in Applied Mathematics and Statistics},
+  volume={10},
+  pages={1287074},
+  year={2024}
+}`
     },
     {
         title: "On graph uncertainty principle and eigenvector delocalization",
@@ -385,7 +466,15 @@ const papers = [
         resources: [
             { label: "PDF", url: "https://openreview.net/pdf?id=p8wFnBshU4" },
             { label: "arXiv", url: "https://arxiv.org/pdf/2306.15810.pdf" }
-        ]
+        ],
+        bibtex: `@inproceedings{rebrova2023graph,
+  title={On graph uncertainty principle and eigenvector delocalization},
+  author={Rebrova, Elizaveta and Salanevich, Palina},
+  booktitle={2023 International conference on sampling theory and applications (SampTA)},
+  pages={1--5},
+  year={2023},
+  organization={IEEE}
+}`
     },
     {
         title: "On block accelerations of Quantile Randomized Kaczmarz for corrupted systems of linear equations",
@@ -400,7 +489,16 @@ const papers = [
         arxivYear: 2022,
         bibtexKey: "cheng2022block",
         bibtexAuthors: "Lu Cheng and Benjamin Jarman and Deanna Needell and Elizaveta Rebrova",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2206.12554" }]
+        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2206.12554" }],
+        bibtex: `@article{cheng2022block,
+  title={On block accelerations of {Q}uantile {R}andomized {K}aczmarz for corrupted systems of linear equations},
+  author={Cheng, Lu and Jarman, Ben and Needell, Deanna and Rebrova, Elizaveta},
+  journal={Inverse Problems},
+  volume={39},
+  number={2},
+  pages={024002},
+  year={2022}
+}`
     },
     {
         title: "Quantile-based iterative methods for corrupted systems of linear equations",
@@ -438,9 +536,18 @@ const papers = [
         tags: ["tensors", "randnla"],
         arxivId: "1912.08294",
         arxivYear: 2019,
-        bibtexKey: "iwen2022lower",
+        bibtexKey: "iwen2021lower",
         bibtexAuthors: "M. A. Iwen and D. Needell and E. Rebrova and A. Zare",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/1912.08294" }]
+        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/1912.08294" }],
+        bibtex: `@article{iwen2021lower,
+  title={Lower memory oblivious (tensor) subspace embeddings with fewer random bits: modewise methods for least squares},
+  author={Iwen, M. A. and Needell, D. and Rebrova, E. and Zare, A.},
+  journal={SIAM Journal on Matrix Analysis and Applications},
+  volume={42},
+  number={1},
+  pages={376--416},
+  year={2021}
+}`
     },
     {
         title: "On a guided Nonnegative Matrix Factorization",
@@ -456,7 +563,15 @@ const papers = [
         arxivYear: 2020,
         bibtexKey: "vendrow2021guided",
         bibtexAuthors: "Joshua Vendrow and Jamie Haddock and Elizaveta Rebrova and Deanna Needell",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2010.11365" }]
+        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/2010.11365" }],
+        bibtex: `@inproceedings{vendrow2021guided,
+  title={On a guided nonnegative matrix factorization},
+  author={Vendrow, Joshua and Haddock, Jamie and Rebrova, Elizaveta and Needell, Deanna},
+  booktitle={ICASSP 2021-2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={3265--32369},
+  year={2021},
+  organization={IEEE}
+}`
     },
     {
         title: "Analysis of Legal Documents via Non-negative Matrix Factorization Methods",
@@ -538,7 +653,17 @@ const papers = [
         arxivYear: 2018,
         bibtexKey: "rebrova2020constructive",
         bibtexAuthors: "Elizaveta Rebrova",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/1809.03926" }]
+        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/1809.03926" }],
+        bibtex: `@article{rebrova2020constructive,
+  title={Constructive regularization of the random matrix norm},
+  author={Rebrova, Elizaveta},
+  journal={Journal of Theoretical Probability},
+  volume={33},
+  number={3},
+  pages={1768--1790},
+  year={2020},
+  publisher={Springer}
+}`
     },
     {
         title: "Scalable and memory-efficient kernel ridge regression",
@@ -590,9 +715,17 @@ const papers = [
         tags: ["randnla"],
         arxivId: "1912.00771",
         arxivYear: 2019,
-        bibtexKey: "needell2019sketching",
+        bibtexKey: "rebrova2019sketching",
         bibtexAuthors: "Elizaveta Rebrova and Deanna Needell",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/1912.00771.pdf" }]
+        resources: [{ label: "arXiv", url: "https://arxiv.org/pdf/1912.00771.pdf" }],
+        bibtex: `@inproceedings{rebrova2019sketching,
+  title={Sketching for Motzkin's iterative method for linear systems},
+  author={Rebrova, Elizaveta and Needell, Deanna},
+  booktitle={2019 53rd Asilomar Conference on Signals, Systems, and Computers},
+  pages={271--275},
+  year={2019},
+  organization={IEEE}
+}`
     },
     {
         title: "Norms of random matrices: local and global problems",
@@ -607,7 +740,16 @@ const papers = [
         arxivYear: 2016,
         bibtexKey: "rebrova2018norms",
         bibtexAuthors: "Elizaveta Rebrova and Roman Vershynin",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/1608.06953" }]
+        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/1608.06953" }],
+        bibtex: `@article{rebrova2018norms,
+  title={Norms of random matrices: local and global problems},
+  author={Rebrova, Elizaveta and Vershynin, Roman},
+  journal={Advances in Mathematics},
+  volume={324},
+  pages={40--83},
+  year={2018},
+  publisher={Elsevier}
+}`
     },
     {
         title: "Coverings of random ellipsoids, and invertibility of matrices with i.i.d. heavy-tailed entries",
@@ -635,10 +777,12 @@ const papers = [
 }`
     },
     {
-        title: "Spectral Properties of Heavy-Tailed Random Matrices (Ph.D. Thesis)",
+        title: "Spectral Properties of Heavy-Tailed Random Matrices",
         authors: "E. Rebrova",
         year: 2018,
         venue: "University of Michigan",
+        venueType: "survey",
+        displayType: "Ph.D. Thesis",
         venueName: "University of Michigan",
         topic: "rmt",
         tags: ["rmt"],
@@ -647,8 +791,7 @@ const papers = [
         ],
         bibtex: `@phdthesis{rebrova2018spectral,
   title={Spectral Properties of Heavy-Tailed Random Matrices},
-  author={Rebrova, E.},
-  school={University of Michigan},
+  author={Rebrova, Elizaveta},
   year={2018}
 }`
     },
@@ -664,9 +807,17 @@ const papers = [
         tags: ["factorizations"],
         arxivId: "1803.10274",
         arxivYear: 2018,
-        bibtexKey: "chavez2018study",
+        bibtexKey: "rebrova2018study",
         bibtexAuthors: "Elizaveta Rebrova and Gustavo Chavez and Yang Liu and Pieter Ghysels and Xiaoye Sherry Li",
-        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/1803.10274" }]
+        resources: [{ label: "arXiv", url: "https://arxiv.org/abs/1803.10274" }],
+        bibtex: `@inproceedings{rebrova2018study,
+  title={A study of clustering techniques and hierarchical matrix formats for kernel ridge regression},
+  author={Rebrova, Elizaveta and Ch{\\'a}vez, Gustavo and Liu, Yang and Ghysels, Pieter and Li, Xiaoye Sherry},
+  booktitle={2018 IEEE international parallel and distributed processing symposium workshops (IPDPSW)},
+  pages={883--892},
+  year={2018},
+  organization={IEEE}
+}`
     }
 ];
 
