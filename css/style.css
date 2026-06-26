@@ -225,10 +225,11 @@ body.home .page-updated {
     }
 
     body.home .news-list {
-        margin-left: 0;
+        margin-left: 22px;
     }
 
     body.home .news-block {
         margin-left: 0;
+        padding-left: 18px;
     }
 }
