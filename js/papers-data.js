@@ -217,7 +217,10 @@ const papers = [
         arxivYear: 2024,
         bibtexKey: "sonthalia2025regularization",
         bibtexAuthors: "Rishi Sonthalia and Jackie Lok and Elizaveta Rebrova",
-        resources: [{ label: "PDF", url: "EarlyStopping2.pdf" }]
+        resources: [
+            { label: "PDF", url: "EarlyStopping2.pdf" },
+            { label: "Slides", url: "early-stopping-slides-liza.pdf" }
+        ]
     },
     {
         title: "Discrete error dynamics of mini-batch gradient descent for least squares regression",
