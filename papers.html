@@ -28,8 +28,8 @@
     <div class="row">
         <div class="col-md-offset-1 col-md-10">
             <div class="research-intro">
-                <p>All my publications below have either the latest arXiv version or a direct PDF link. I also include code links when possible, and a few relevant talk slides. Please email me if you have trouble accessing a paper, find a mistake, or have suggestions.</p>
                 <p>The list can be sorted by time, venue (journals, conferences, surveys), or topic. The topic categories are not disjoint areas, but rather overlapping views of my research interests in developing randomized methods for scalable, robust, and structure-aware computation, as well as their mathematical foundations.</p>
+                <p>Code links are included when possible, as well as relevant talk slides. Please email me if you have trouble accessing a paper, find a mistake, or have suggestions.</p>
             </div>
 
             <div class="research-controls" aria-label="Paper list controls">
@@ -49,12 +49,12 @@
 
             <div id="paper-root" class="paper-list"></div>
 
-            <p class="page-updated">Last updated: June 2026</p>
+            <p class="page-updated">Last updated: 24 September 2026</p>
         </div>
     </div>
 </div>
 
-<script src="js/papers-data.js?v=25"></script>
+<script src="js/papers-data.js?v=38"></script>
 <script>
 const { topics, venueTypes, papers } = window.papersData;
 let currentView = "newest";
@@ -213,17 +213,27 @@ function paperCard(paper) {
     authors.textContent = paper.authors;
     article.appendChild(authors);
 
+    if (paper.advisors) {
+        const advisors = document.createElement("div");
+        advisors.className = "paper-meta";
+        advisors.textContent = `Project advisors: ${paper.advisors}`;
+        article.appendChild(advisors);
+    }
+
     const venue = document.createElement("div");
     venue.className = "paper-venue";
     renderVenue(venue, paper);
     article.appendChild(venue);
 
     const bibtexText = paperBibtex(paper);
+    const paperResources = paper.resources || [];
+    const hasArxiv = paperResources.some(resource => resource.label.toLowerCase() === "arxiv");
+    const visibleResources = paperResources.filter(resource => !hasArxiv || resource.label.toLowerCase() !== "pdf");
     let bibtexBlock;
-    if ((paper.resources && paper.resources.length) || bibtexText) {
+    if (visibleResources.length || bibtexText) {
         const resources = document.createElement("div");
         resources.className = "resource-links";
-        (paper.resources || []).forEach(resource => {
+        visibleResources.forEach(resource => {
             const link = document.createElement("a");
             link.className = resourceClass(resource.label);
             link.href = resource.url;
@@ -273,7 +283,7 @@ function renderList(items) {
 function renderGroupedByTopic(items) {
     const selectedTopics = currentTopic === "all" ? topics.filter(topic => topic.id !== "all") : [topics.find(topic => topic.id === currentTopic)];
     selectedTopics.forEach(topic => {
-        const groupItems = sortedPapers(items.filter(paper => paper.topic === topic.id));
+        const groupItems = sortedPapers(items.filter(paper => paper.tags.includes(topic.id)));
         if (!groupItems.length) return;
 
         const section = document.createElement("section");

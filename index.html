@@ -16,7 +16,7 @@
     <!--<link href="css/bootstrap-theme.css" rel="stylesheet">-->
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css?v=2" rel="stylesheet">
 
     <script type="text/javascript" async
             src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -57,21 +57,35 @@
                     <a class="btn btn-default btn-lg" href="https://scholar.google.com/citations?user=nZ27XjIAAAAJ&hl=en" role="button">Google Scholar</a>
                 </p>
                 <p class="secondary-links">
-                    <a href="short-cv.pdf">Short CV (2025)</a> ·
+                    <a href="short-cv.pdf?v=20260924">CV (September 2026)</a> ·
                     <a href="https://arxiv.org/search/?query=rebrova&searchtype=all&source=header">arXiv</a> ·
                     <a href="mailto:elizaveta.rebrova@maths.ox.ac.uk">elizaveta.rebrova@maths.ox.ac.uk</a>
                 </p>
-                <p class="page-updated">Last updated: September 2026</p>
+                <p class="page-updated">Last updated: 24 September 2026</p>
             </div>
 
         </div>
         <div class="col-md-offset-1 col-md-7 col-md-pull-0">
 
+            <section id="news" aria-labelledby="news-heading">
+                <h2 id="news-heading">News</h2>
+                <p class="news-date">September 2026</p>
+                <ul class="news-list">
+                    <li><strong>New preprint!</strong> <a href="https://arxiv.org/abs/2609.13040">Quantile-based loss filtering for robust SGD</a>: a paper on loss-based filtering for finite-sum optimization with a subset of corrupted component functions whose gradients may be highly unreliable — theory for the convex case + experiments on polynomial regression, regularized logistic regression, and regularized hinge loss. Joint work with Jamie Haddock and Anna Ma.</li>
+                    <li><strong>New preprint!</strong> <a href="https://arxiv.org/abs/2609.12421">Inference for accelerated sketched Newton methods</a>: We study a sketch-and-project solver with momentum for approximating the Newton direction in an online sketched Newton method: asymptotic normality, faster convergence, and uncertainty quantification via random scaling. Joint work with Xinchen Du, Michał Dereziński, and Sen Na.</li>
+                    <li><strong>Congratulations, Shambhavi!</strong> <a href="https://shambhavi-suri.github.io/">Shambhavi Suryanarayanan</a> has completed her Ph.D. and will join Oak Ridge National Laboratory as a postdoctoral researcher.</li>
+                    <li>I have joined the <a href="https://www.ox.ac.uk/">University of Oxford</a> as an Associate Professor in the Numerical Analysis Group at the <a href="https://www.maths.ox.ac.uk/">Mathematical Institute</a> and <a href="https://www.new.ox.ac.uk/">New College</a> as a Senior Research Fellow!</li>
+                </ul>
+            </section>
+            <hr/>
+
             <h2> Research </h2>
 
             <p>My research is in randomized numerical linear algebra and the mathematics of data science, with close connections to high-dimensional probability and stochastic optimization. I am interested in mathematically justified and effective randomized algorithms for large-scale data problems, especially in settings where the data or the problem has non-trivial mathematical structure, such as spectral decay, multimodality, nonnegativity, tensor structure, or structured noise.</p>
 
-            <p>My work has been previously supported by NSF DMS-2309685 and NSF DMS-2108479.</p>
+            <p>I received my PhD in Mathematics from the <a href="https://lsa.umich.edu/math">University of Michigan</a> in 2018, advised by <a href="https://www.math.uci.edu/~rvershyn/index.html">Roman Vershynin</a>. I then held postdoctoral positions at <a href="https://ww3.math.ucla.edu/">UCLA</a> (2018–2020) and <a href="https://www.lbl.gov/">Lawrence Berkeley National Laboratory</a> (2021). Before joining Oxford in 2026, I was an Assistant Professor in <a href="https://orfe.princeton.edu/">Operations Research and Financial Engineering</a> at Princeton University (2021–2026), affiliated with the <a href="https://www.pacm.princeton.edu/">Program in Applied and Computational Mathematics</a> and the <a href="https://csml.princeton.edu/">Center for Statistics and Machine Learning</a>.</p>
+
+            <p>My work has been previously supported by <a href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2309685">NSF DMS-2309685</a> and <a href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2108479">NSF DMS-2108479</a>.</p>
             <p>I also serve as an Associate Editor for <a href="https://academic.oup.com/imaiai">Information and Inference: A Journal of the IMA</a>.</p>
 
             <hr/>
@@ -80,29 +94,25 @@
             <h2> Advising </h2>
             Current Ph.D. students:
             <ul>
-                <li><a href="https://shambhavi-suri.github.io/">Shambhavi Suryanarayanan</a>; 5th year</li>
                 <li>Sofiia Shvaiko; 4th year</li>
             </ul>
 
             Former Ph.D. students:
             <ul>
-                <li><a href="https://jackielok.github.io/">Jackie Lok</a>, Ph.D. 2026; now Peng Tsu Ann Assistant Professor at Department of Mathematics, NUS</li>
-                <li><a href="https://chaudhrya.github.io/">Abraar Chaudhry</a>, Ph.D. 2024, co-advised with A.A. Ahmadi; now postdoc at Georgia Tech</li>
+                <li><a href="https://shambhavi-suri.github.io/">Shambhavi Suryanarayanan</a>, Ph.D. 2026 (→ Oak Ridge National Laboratory (Postdoctoral Researcher))</li>
+                <li><a href="https://jackielok.github.io/">Jackie Lok</a>, Ph.D. 2026 (→ National University of Singapore (Peng Tsu Ann Assistant Professor))</li>
+                <li><a href="https://chaudhrya.github.io/">Abraar Chaudhry</a>, Ph.D. 2024, co-advised with A.A. Ahmadi (→ Georgia Tech (Postdoctoral Fellow) → University of Colorado Boulder (Keith Julien Visiting Assistant Professor))</li>
             </ul>
 
-            Master's thesis:
-            <ul>
-                <li>Nicolo Grometto, "Essays on Random Matrices" (2023)</li>
-            </ul>
             <hr/>
             <h2 id="teaching">Teaching experience</h2>
             <p><strong>Princeton University (2021–2026)</strong></p>
-            <p><a href="ORF526.html">Probability and Stochastic Processes</a>, <a href="ORF387.html">Networks</a>, <a href="ORF523.html">Convex and Conic Optimization</a>.</p>
+            <p><a href="ORF526.html">Probability and Stochastic Processes</a>, <a href="ORF523.html">Convex and Conic Optimization</a>, <a href="ORF387.html">Networks</a>.</p>
 
             <p><strong>UCLA (2018–2020)</strong></p>
             <p>Probability, Statistics, Stochastic Processes, and Optimization.</p>
 
-            <p><strong>University of Michigan (2013–2018)</strong></p>
+            <p><strong>University of Michigan (2013–2017)</strong></p>
             <p>Calculus and Differential Equations.</p>
 
             <p><strong>Earlier teaching</strong></p>

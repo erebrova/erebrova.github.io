@@ -190,3 +190,18 @@ body.home .page-updated {
     }
 
 }
+
+body.home .news-date {
+    color: #6f6755;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+body.home .news-list {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+body.home .news-list li {
+    margin-bottom: 12px;
+}
