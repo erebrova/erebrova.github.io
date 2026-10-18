@@ -1,0 +1,6 @@
+# Local operating-system and editor metadata
+.DS_Store
+.idea/
+
+# Keep private archives outside this public website repository
+website-private-archive*/
